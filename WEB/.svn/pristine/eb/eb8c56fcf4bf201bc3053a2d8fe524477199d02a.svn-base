@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html style="height: 100%;display: none">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>办理用户</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+    <link href="layui/css/layui.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/banliyonghu.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="page_father">
+    <div class="head clearfix">
+        <a href="#" class="logo fl">
+            <img src="images/logo.png" alt="">
+        </a>
+        <i class="logo-line fl"></i>
+        <div class="head-search fl">
+            <input type="text" placeholder="事项   部门   类型   政策">
+            <i class="icon"></i>
+        </div>
+
+
+        <div class="head-right fr">
+            <div class="info fl clearfix">
+                <span class="touxiang fl">
+                    <img src="images/tx.jpeg" alt="">
+                </span>
+                <span class="fl">Hi,王志</span>
+            </div>
+            <i class="logo-line fl"></i>
+            <div class="city fl">
+                <span class="fl">城市：</span>
+                <select id="select" class="select fl" name="state" data-value="0">
+                    <option value="0">佛山</option>
+                    <option value="1">南京</option>
+                </select>
+            </div>
+
+            <div class="weather fl">
+                <img src="images/duoyun.png" class="fl" alt="">
+                <div class="fl">
+                    <p class="wd">23°</p>
+                    <p>空气：良</p>
+                </div>
+            </div>
+            <i class="logo-line fl"></i>
+            <div class="date fl">
+                <p class="time">15:40</p>
+                <p>2020/9/9</p>
+            </div>
+
+            <a href="#" class="logout fl"></a>
+
+        </div>
+
+    </div>
+    <div style="height:0.75rem;width:100%"></div>
+    <div class="banner" id="banner">
+        <div class="code code1">
+            <img src="images/code.png" alt="">
+        </div>
+        <div class="code code2">
+            <img src="images/code.png" alt="">
+        </div>
+        <a href="#" class="banner-down"></a>
+    </div>
+
+    <div class="main clearfix">
+        <div class="menu fl">
+            <ul>
+                <li>
+                    <a href="#">首页<i class="right-icon"></i></a>
+                </li>
+                <li>
+                    <a href="javascript:" class="hasChild">咨询管理<i class="right-icon"></i></a>
+                    <ul class="child-ul">
+                        <li>
+                            <a href="monixiangmu.html">模拟项目</a>
+                        </li>
+                        <li>
+                            <a href="#">知识库</a>
+                        </li>
+                        <li>
+                            <a href="#">新闻政策</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">预受理管理<i class="right-icon"></i></a>
+                </li>
+                <li class="active">
+                    <a href="javascript:" class="hasChild">办理用户<i class="right-icon"></i></a>
+                    <ul class="child-ul">
+                        <li class="active">
+                            <a href="#">用户管理</a>
+                        </li>
+                        <li>
+                            <a href="#">业务办理</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">受理信息管理<i class="right-icon"></i></a>
+                </li>
+                <li>
+                    <a href="#">设备管理<i class="right-icon"></i></a>
+                </li>
+                <li>
+                    <a href="#">系统管理<i class="right-icon"></i></a>
+                </li>
+                <li>
+                    <a href="#">统计分析<i class="right-icon"></i></a>
+                </li>
+            </ul>
+
+            <div class="fix-left layui-form  clearfix">
+                <span>固定为侧栏</span>
+                <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
+            </div>
+        </div>
+        <div class="content fl">
+            <div class="mbx"><a href="#"><i class="shouye-icon"></i>首页</a>-<a href="#">用户管理</a></div>
+
+
+
+            <div class="floor floor1 clearfix">
+                <div class="floor1-left fl">
+                    <div class="card floor1-left-top">
+                        <ul class="clearfix">
+                            <li class="">
+                                <p>项目总数</p>
+                                <p>2356465</p>
+                                <p>昨日+200</p>
+                            </li>
+                            <li class="">
+                                <p>正在办理</p>
+                                <p>2356465</p>
+                                <p>昨日+200</p>
+                            </li>
+                            <li class="">
+                                <p>逾期数量</p>
+                                <p>2356465</p>
+                                <p>昨日+200</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="card floor1-left-bottom" style="position: relative">
+                        <div class="chart" id="map"></div>
+
+                        <div class="dingwei">
+                            <span class="dw-shi">佛山市</span>
+                            <span class="dw-qv"></span>
+                        </div>
+
+                        <img src="images/zhu.png" alt="" style="width:0.6rem;position: absolute;left:50%;margin-left:-0.3rem;top:50%">
+                        <img src="images/ditu.jpeg" style="position: absolute;width:5rem;left:50%;margin-left:-2.5rem;bottom:0rem;" alt="">
+                        <a href="javascript:" id="back" style="position: absolute;right:0.3rem;top:0.3rem;color:#999;display: none">返回</a>
+                    </div>
+                </div>
+                <div class="card floor1-right fl">
+                    <div class="style1">
+                        <ul class="flex">
+                            <li>
+                                <p id="fugai">覆盖区县</p>
+                                <p><b>856</b>个</p>
+                            </li>
+                            <li>
+                                <p>部门</p>
+                                <p><b>856</b>个</p>
+                            </li>
+                            <li>
+                                <p>事项</p>
+                                <p><b>856</b>个</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="style2">
+                        <div class="title clearfix">
+                            <span>具体地区统计</span>
+                            <span>数量</span>
+                        </div>
+                        <div class="" id="bar3" style="width:100%;height:1.5rem;">
+
+                        </div>
+                        <div class="title clearfix">
+                            <span>预警异常项目</span>
+                            <span>数量</span>
+                        </div>
+                        <ul class="style2-ul2" id="yujing">
+                            <li><span>纵六路二期建设工程</span><span class="chaoshi"></span></li>
+                            <li><span>总部及研发中心项目</span><span class="chaoshi"></span></li>
+                            <li><span>综合种养基地建设项目</span><span class="chaoshi"></span></li>
+                            <li><span>综合研发大楼项目</span><span class="chaoshi"></span></li>
+                            <li><span>综合交易六区消防改造项目</span><span class="chaoshi"></span></li>
+                            <li><span>自助式数据智能分析服务平台</span><span class="chaoshi"></span></li>
+                        </ul>
+                        <a href="#" class="jiaoliu">发起讨论交流</a>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="floor floor2 clearfix">
+                <div class="floor2-left card fl">
+                    <div class="normal-title1">相关待办项目</div>
+
+                    <table class="layui-table" lay-skin="line" id="table1">
+                        <colgroup>
+                            <col width="300">
+                            <col width="150">
+                            <col width="150">
+                            <col width="150">
+                            <col width="150">
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>名称</th>
+                            <th>项目区域</th>
+                            <th>项目状态</th>
+                            <th>已用天数</th>
+                            <th>剩余天数</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td>纵六路二期建设工程</td><td>鼓楼区</td><td>审评中</td><td>7天</td><td>3天</td></tr>
+                        <tr><td>总部及研发中心项目</td><td>玄武区</td><td>审评中</td><td>7天</td><td>3天</td></tr>
+                        <tr><td>综合种养基地建设项目</td><td>鼓楼区</td><td>审评中</td><td>7天</td><td>3天</td></tr>
+                        <tr><td>综合研发大楼项目</td><td>玄武区</td><td>审评中</td><td>7天</td><td>3天</td></tr>
+                        <tr><td>综合交易六区消防改造项目</td><td>鼓楼区</td><td>审评中</td><td>7天</td><td>3天</td></tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="floor2-right card fl">
+                    <div class="normal-title2">事项详情</div>
+                    <!--<div class="style3">-->
+                        <!--<ul>-->
+                            <!--<li class="status1">-->
+                                <!--<p><span>材料完整性检查</span><span class="status"></span></p>-->
+                            <!--</li>-->
+                            <!--<li class="status1">-->
+                                <!--<p><span>材料完整性检查</span><span class="status"></span></p>-->
+                            <!--</li>-->
+                            <!--<li class="status1">-->
+                                <!--<p><span>材料完整性检查</span><span class="status"></span></p>-->
+                            <!--</li>-->
+                            <!--<li class="status2">-->
+                                <!--<p><span>材料完整性检查</span><span class="status"></span></p>-->
+                                <!--<p class="tip">该申请人信息存在可疑</p>-->
+                            <!--</li>-->
+                            <!--<li class="status3">-->
+                                <!--<p><span>审核天数</span><span class="status"></span></p>-->
+                                <!--<p class="tip">该申请人信息存在可疑</p>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+
+                    <div class="style6" id="detail1">
+                        <ul>
+                            <li>
+                                <a href="javascript:">
+                                    <div class="text">
+                                        <p>水土保持方案</p>
+                                        <p>办理中：3天</p>
+                                    </div>
+                                    <div class="btn status1">
+                                        正在办理
+                                    </div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <div class="text">
+                                        <p>地震安全性评价</p>
+                                        <p>办理中：3天</p>
+                                    </div>
+                                    <div class="btn status1">
+                                        正在办理
+                                    </div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <div class="text">
+                                        <p>文物保护方案</p>
+                                        <p>办理中：3天</p>
+                                    </div>
+                                    <div class="btn status2">
+                                        待办理
+                                    </div>
+                                </a>
+
+                            </li>
+                        </ul>
+                        <!--<a href="#" class="jiaoliu">发起讨论交流</a>-->
+                    </div>
+                </div>
+
+            </div>
+            <div class="floor floor3 clearfix">
+                <div class="floor3-center card">
+                    <div class="normal-title1">办理审批统计</div>
+                    <div class="chart" id="line1"></div>
+                </div>
+
+            </div>
+
+
+            <div class="floor floor4 clearfix">
+                <div class="floor4-left card fl">
+                    <div class="normal-title1">审批人员历年统计</div>
+
+                    <div class="chart" id="line2"></div>
+
+                </div>
+                <div class="floor4-right card fl">
+                    <div class="normal-title1">审批事项时间统计</div>
+
+                    <div class="chart" id="bar1"></div>
+
+                </div>
+
+            </div>
+
+            <div class="floor floor5 clearfix">
+                <div class="floor5-left card fl">
+                    <div class="normal-title1">项目审批准时率 <span class="range">全市</span></div>
+
+                    <div class="chart" id="pie1"></div>
+
+
+                </div>
+                <div class="floor5-right card fl">
+                    <div class="normal-title1">各区县审批准时率</div>
+                    <div class="chart" id="bar2"></div>
+
+                </div>
+
+            </div>
+
+            <div class="floor floor6 clearfix">
+                <div class="floor6-center flex card fl" style="padding:0;">
+                    <div class="floor6-left">
+                        <div class="normal-title2">新闻政策</div>
+
+                        <div class="style4">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <!--<img src="images/tx.png" alt="">-->
+                                        <div class="text">
+                                            <p class="text-title">
+                                                南京工程建设项目审批制度改革：为企业“减负”
+                                            </p>
+                                            <p>
+                                                审批时间压缩60%、报件材料缩减44%、企业审图费用节省4000多万元……2018年5月以来，南京在全国率先开启工程建设项目审批制度改革，营商环境更加优化，身处其中的企业获得更多“红利”。
+                                            </p>
+                                            <div class="source">
+                                                <a href="http://www.chinanews.com/gn/2020/01-06/9052361.shtml">http://www.chinanews.com/gn/2020/01-06/9052361.shtml</a>
+                                                <a class="type" href="javascript:">新闻</a>
+                                            </div>
+                                        </div>
+                                        <div class="style4-date">
+                                            <p>2020-09-11 00：20</p>
+                                            <span class="enter"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <!--<img src="images/tx.png" alt="">-->
+
+                                        <div class="text">
+                                            <p class="text-title">
+                                                南京深化工程建设项目审批制度改革 打造“南京特色”
+                                            </p>
+                                            <p>
+                                                2018年，南京市建委作为全市工程建设项目审批制度改革总牵头部门，以“864”为总体改革目标，统筹推进南京市工程建设项目审批制度改革试点。在全市各部门的大力配合下，到去年年底，南京市共计取消9个审批事项，合并8个审批事项、26个事项转变管理方式、62个事项缩减审批时限，建成了 “多规合一”的“一张蓝图”、覆盖全市的“一个系统”、集成式的“一个窗口”、覆盖全流程的“一张单表”覆盖工程建设项目审批全流程的“五个一”审批体系。工程建设项目审批管理系统在今年年初如期上线运行，实现“一家牵头、并联审批、限时办结”，工程建设项目审批时间压缩近80%、企业报件材料缩减约44%。
+                                            </p>
+                                            <div class="source">
+                                                <a href="http://www.js.xinhuanet.com/2019-12/11/c_1125332029.htm">http://www.js.xinhuanet.com/2019-12/11/c_1125332029.htm</a>
+                                                <a class="type" href="javascript:">新闻</a>
+                                            </div>
+                                        </div>
+                                        <div class="style4-date">
+                                            <p>2020-09-11 07：10</p>
+                                            <span class="enter"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <!--<img src="images/tx.png" alt="">-->
+
+                                        <div class="text">
+                                            <p class="text-title">
+                                                工程建设项目审批“864”改革：2019年持续打造“南京模式”
+                                            </p>
+                                            <p>
+                                                一个工程建设项目，从申报立项用地规划许可证阶段到办理产权登记，需要多久？去年，南京已经给出了答案：根据项目不同，不超过40、60、80个工作日。这就是新时代的“南京速度”。“跑一次腿，审批程序网上全搞定，这样的改革效率，对我们企业的发展非常有促进作用。”南京汽车集团有限公司工程师张梦嘉说。作为全国16个试点城市之一，也是江苏省唯一承担此项试点任务的城市，我市去年印发了《南京市工程建设项目审批制度改革试点实施方案》。在这场政务服务“无声的战场”中，市建委结合全市优化营商环境指标体系，以啃“硬骨头”的决心，自加压力，极大地改善投资、营商环境，释放出生产力。“一张蓝图”全规划全市已建立起统一的空间规划体系，形成基于“多规合一”的“一张蓝图”，实现城乡规划和土地利用总体规划整合，完成整合数量20个。“城市开发边界、生态控制向、永久基本农田”三类控制线已经划定，实现了更多规划整合并消除一定数量的差异图斑。同时建立“多规合一”空间信息管理平台，为业务协同平台提供空间规划数据，各相关部门能在项目生成策划阶段在平台上协同操作，实现意见交互、联评联审。目前，在业务协同平台策划的项目数量达到138个。此外，我市还制定了“多规合一”业务协同管理办法和协同平台运行规则（《关于印发〈南京市工程建设项目“多规合一”业务协同平台运行规则暨业务协同管
+                                            </p>
+                                            <div class="source">
+                                                <a href="http://www.nanjing.gov.cn/njxx/201901/t20190130_1394290.html">http://www.nanjing.gov.cn/njxx/201901/t20190130_1394290.html</a>
+                                                <a class="type" href="javascript:">新闻</a>
+                                            </div>
+                                        </div>
+                                        <div class="style4-date">
+                                            <p>2020-09-11 09：00</p>
+                                            <span class="enter"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="pages">
+                                <a href="javascript:">上一页</a>
+                                <a href="javascript:" class="active">1</a>
+                                <a href="javascript:">2</a>
+                                <a href="javascript:">3</a>
+                                <a href="javascript:">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="floor6-right">
+                        <div class="normal-title2">知识库 <a href="javascript:">流程模拟工具</a></div>
+                        <div class="style5">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="date">
+                                            <p>09.11</p>
+                                            <p>2020</p>
+                                        </div>
+                                        <p class="title">办理建设工程社会保障费的征收流程是怎样的？</p>
+                                        <p>依据：《关于印发〈建设工程社会保险费管理的实施意见〉的通知》（宁建建监字〔2014〕670号）第四条 建设工程社会保险费由建设单位在工程开工前按工程项目造价中规定的费率一次性缴清，不得减免，计取标准按 《江苏省建设工程费用定额》（省住建厅新标准）执行。建设单位在工程预付款或工程进度款中扣回上述所缴费用。 </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="date">
+                                            <p>09.11</p>
+                                            <p>2020</p>
+                                        </div>
+                                        <p class="title">伪造、变造不动产登记证书须承担什么法律责任(不动产类)</p>
+                                        <p>答：伪造、变造不动产权属证书，或买卖、使用伪造、变造的不动产权属证书，会造成不动产权利归属与实际情况不符，给相关利害关系人带来重大损失。对此类违法行为，除由不动产登记机构或者公安机关收缴伪造、变造的不动产权属证书、不动产登记证明外，相关责任人还应当承担相应的民事责任、行政责任和刑事责任。
+
+                                            民事责任。作为此类行为，给他人造成损害的，依法承担民事赔偿责任。
+
+                                            行政责任。作出此类行为，有违法所得的，没收其违法所得；对构成违反治安管理行为，尚未构成犯罪的，移动公安机关依法给予治安管理处罚，根据《治安管理处罚法》第五十二条规定，处十日以上十五日以下拘留，可以并处一千元以下罚款；情节较轻的，处五日以上十日以下拘留，可以并处五百元以下罚款。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="date">
+                                            <p>09.11</p>
+                                            <p>2020</p>
+                                        </div>
+                                        <p class="title">国土资源部“十二五”建设科普基地138个（其他）</p>
+                                        <p>记者近日获悉，“十二五”期间，国土资源部共建设了138个科普基地，举办重大科普活动2000多场，受众1000多万人次。
+                                            　　据了解，2011年，国土资源部与科技部联合印发了《国土资源“十二五”科学技术普及行动纲要》，明确了“十二五”期间国土资源科普工作发展目标，部署了重点任务。2015年，国土资源部正式加入全民科学素质纲要实施办公室，有效地促进了国土资源科普工作的开展。
+                                            　　国土资源部科技与国际合作司司长姜建军表示，国土资源部以逐步提高全民国土资源科学素养为目标，以加强国土资源科普能力建设为主线，科普基地、科普活动、科普作品、科普人才等工作得到全面发展，形成了特色鲜明的国土资源科普体系，有效提升了国土资源事业公众认知度。
+                                            　　据介绍，国土资源科普基地已经遍布除港澳台以外的31个省（自治区、直辖市），河北、广东、江苏、河南四省还开展了省级国土资源科普基地命名工作，形成了一个覆盖面广、形式多样的科普基地网络；逐步搭建起了三大类供各科普基地学习交流平台，一是两年一次的科普基地工作研讨会，二是编印《国土资源科普基地通讯》和《国土资源科普基地动态》，三是开通国土资源科普基地网站。</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="date">
+                                            <p>09.11</p>
+                                            <p>2020</p>
+                                        </div>
+                                        <p class="title">国家地下水监测工程取得明显成效（地质环境类）</p>
+                                        <p>记者日前从中国地质环境监测院了解到，2015年，该院与31家省级地质环境监测机构紧密配合、各司其职，严格控制施工进度，确保工程质量，形成了独具特色的“1+31”工程组织实施模式，取得明显效果。
+                                            　　据了解，2015年，该院按照年度总体实施方案安排，新建监测井300个，改建监测井50个，钻探总进尺38611米，部署京津冀协同发展区以及长江经济带相关的河北、山东、河南、江苏四省开展监测站点建设工作。据悉，截至2月12日，四省钻探进尺已完成23956米，建设完成监测站点176个。
+
+                                            　　据悉，除了监测站点建设，2015年国家地下水监测工程完成了国家地下水监测中心大楼、350台监测仪器设备招投标；启动了信息应用服务系统总体设计、地下水监测数据库建设，并完成了监测工程项目管理系统研发工作等。</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="foot">
+        <div class="fl text">
+            <p>客服电话：</p>
+            <p class="phone">400-666-8899</p>
+            <p>copyright 2006-2020 </p>
+        </div>
+        <img src="images/code.png" class="fr" alt="">
+    </div>
+</div>
+
+<!--header end-->
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.select.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+    var whdef = 100 / 1920;// 表示1920的设计图,使用100PX的默认值
+    var wH = window.innerHeight;// 当前窗口的高度
+    var wW = window.innerWidth;// 当前窗口的宽度
+    var rem = wW * whdef;// 以默认比例值乘以当前窗口宽度,得到该宽度下的相应FONT-SIZE值
+    $('html').css('font-size', rem + "px");
+    $('html').css('display', 'block');
+
+    $(window).resize(function () {          //当浏览器大小变化时
+        location.reload();
+    });
+
+
+
+
+
+
+//    当前时间
+    setInterval(function(){
+
+        var now=new Date().getTime()/1000
+        var time=formatTime(now,'h:m')
+        var date=formatTime(now,'Y/M/D');
+        $(".head .date").html('<p class="time">'+time+'</p><p>'+date+'</p>');
+
+    },1000)
+
+    function formatTime(number,format) {
+
+        var formateArr  = ['Y','M','D','h','m','s'];
+        var returnArr   = [];
+        var date = new Date(number * 1000);
+        returnArr.push(date.getFullYear());
+        returnArr.push(formatNumber(date.getMonth() + 1));
+        returnArr.push(formatNumber(date.getDate()));
+        returnArr.push(formatNumber(date.getHours()));
+        returnArr.push(formatNumber(date.getMinutes()));
+        returnArr.push(formatNumber(date.getSeconds()));
+        for (var i in returnArr)
+        {
+            format = format.replace(formateArr[i], returnArr[i]);
+        }
+        return format;
+    }
+
+    function formatNumber(n) {
+        n = n.toString()
+        return n[1] ? n : '0' + n
+    }
+
+
+
+    $('#select').select();
+
+
+    var h=$(".content").height();
+    $(".menu").css("height",h)
+
+
+    layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate;
+
+    });
+
+
+    var h2=parseInt($(".banner").height());
+
+    $(window).scroll(function() {
+        //为了保证兼容性，这里取两个值，哪个有值取哪一个
+        //scrollTop就是触发滚轮事件时滚轮的高度
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//        console.log("滚动距离" + scrollTop);
+        if(scrollTop > h2){
+            $("#banner").hide();
+        }
+    })
+
+
+
+
+
+    var ec = echarts;
+
+    mapF('佛山市.json');
+
+    chart();
+    detail();
+
+
+    var map = ec.init(document.getElementById('map'));
+    function mapF(jsonName) {
+        $.get('js/json/' + jsonName, function (geoJson) {
+            ec.registerMap(jsonName, geoJson);
+
+
+            var optionMap = {
+                backgroundColor: 'transparent',
+
+                tooltip: {
+                    trigger: 'item',
+                },
+                geo: {
+                    map: jsonName,
+                    label: {
+                        emphasis: {
+                            show: false
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            areaColor: '#deecfd',
+                            borderColor: '#a9c9fa'
+                        },
+                        emphasis: {
+                            areaColor: '#6fb4f8'
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: '',
+                        type: 'map',
+                        mapType: jsonName, // 自定义扩展图表类型
+                        itemStyle: {
+                            normal: {
+                                borderColor: '#a9c9fa',
+                                borderWidth: 1,
+                                areaColor: 'transparent',
+//                                shadowColor: 'rgba(0, 235, 245, 0.8)',
+//                                shadowBlur: 10,
+                                label: {
+                                    show: false,
+                                    textStyle: {
+                                        color: '#fff',
+                                        fontSize: 10
+                                    }
+                                }
+                            },
+                            emphasis: {
+                                label: {
+                                    show: true,
+                                    textStyle: {
+                                        color: '#fff',
+                                        fontSize: 12
+                                    }
+                                },
+                                areaColor: '#6fb4f8'
+                            }
+                        },
+                        mapLocation: {
+                            x: 'center',
+                            y: 'center'
+                        },
+                        data: ''
+                    }
+
+//
+                ]
+            };
+
+
+
+            map.clear();
+            map.setOption(optionMap);
+
+
+
+
+
+
+
+//            var geoCoordMap = {
+//                "东城区": [116.418757, 39.937544],
+//                "西城区": [116.366794, 39.910309],
+//                "朝阳区": [116.486409, 39.991489],
+//                "丰台区": [116.286968, 39.863642],
+//                "石景山区": [116.170445, 39.974601],
+//                "海淀区": [116.280316, 40.039074],
+//                "门头沟区": [115.905381, 40.009183],
+//                "房山区": [115.701157, 39.735535],
+//                "通州区": [116.758603, 39.802486],
+//                "顺义区": [116.753525, 40.128936],
+//                "昌平区": [116.235906, 40.318085],
+//                "大兴区": [116.338033, 39.658908],
+//                "怀柔区": [116.607122, 40.524272],
+//                "平谷区": [117.112335, 40.244783],
+//                "密云区": [116.943352, 40.477362],
+//                "延庆区": [115.985006, 40.465325]
+//            };
+//
+//            var rawData = [
+//                // ["东城区",10,20,30],
+//                // ["西城区",10,20,30],
+//                ["朝阳区",10,20,30],
+//                ["丰台区",10,20,30],
+//                ["石景山区",10,20,30],
+//                ["海淀区",10,20,30],
+//                ["门头沟区",10,20,30],
+//                ["房山区",10,20,30],
+//                ["通州区",10,20,30],
+//                ["顺义区",10,20,30],
+//                ["昌平区",10,20,30],
+//                ["大兴区",10,20,30],
+//                ["怀柔区",10,20,30],
+//                ["平谷区",10,20,30],
+//                ["密云区",10,20,30],
+//                ["延庆区",10,20,30]
+//            ];
+//
+//            function renderEachCity() {
+//                var option = {
+//                    xAxis: [],
+//                    yAxis: [],
+//                    grid: [],
+//                    series: []
+//                };
+//                // var inflationStartIdx = 14;
+//                // var inflationYearCount = 3;
+//                // var inflationYearStart = '2006';
+//                // var xAxisCategory = [];
+//                // for (var i = 0; i < inflationYearCount; i++) {
+//                //     xAxisCategory.push((+inflationYearStart + i) + '');
+//                // }
+//
+//                echarts.util.each(rawData, function(dataItem, idx) {
+//                    var geoCoord = geoCoordMap[dataItem[0]];
+//                    var coord = map.convertToPixel('geo', geoCoord);
+//                    // var boundL = -12.782788213627585;
+//                    // var boundR = 35.92763028872384;
+//                    // var boundT = 32.22854555899493;
+//                    // var boundB = 95.18817097360194;
+//                    // if (!coord ||
+//                    //     geoCoord[0] < boundL ||
+//                    //     geoCoord[0] > boundR ||
+//                    //     geoCoord[1] > boundB ||
+//                    //     geoCoord[1] < boundT
+//                    // ) {
+//                    //     return;
+//                    // }
+//                    idx += '';
+//
+//                    inflationData = [30,50,20];
+//                    // for (var k = 0; k < inflationYearCount; k++) {
+//                    //     inflationData.push(dataItem[inflationStartIdx + k]);
+//                    // }
+//
+//                    option.xAxis.push({
+//                        id: idx,
+//                        gridId: idx,
+//                        type: 'category',
+//                        name: dataItem[0],
+//                        // nameStyle: {
+//                        //     color: 'red',
+//                        //     fontSize: 12
+//                        // },
+//                        nameLocation: 'middle',
+//                        nameGap: 3,
+//                        splitLine: {
+//                            show: false
+//                        },
+//                        axisTick: {
+//                            show: false
+//                        },
+//                        axisLabel: {
+//                            show: false
+//                        },
+//                        axisLine: {
+//                            onZero: false,
+//                            lineStyle: {
+//                                color: '#666'
+//                            }
+//                        },
+//                        // data: xAxisCategory,
+//                        data: ["数据A","数据B","数据C"],
+//                        z: 100
+//
+//                    });
+//                    option.yAxis.push({
+//                        id: idx,
+//                        gridId: idx,
+//                        splitLine: {
+//                            show: false
+//                        },
+//                        axisTick: {
+//                            show: false
+//                        },
+//                        axisLabel: {
+//                            show: false
+//                        },
+//                        axisLine: {
+//                            show: false,
+//                            lineStyle: {
+//                                color: '#1C70B6'
+//                            }
+//                        },
+//                        z: 100
+//                    });
+//                    option.grid.push({
+//                        id: idx,
+//                        width: 30,
+//                        height: 40,
+//                        left: coord[0] - 15,
+//                        top: coord[1] - 15,
+//                        z: 100
+//                    });
+//                    option.series.push({
+//                        id: idx,
+//                        type: 'bar',
+//                        xAxisId: idx,
+//                        yAxisId: idx,
+//                        barGap: 0,
+//                        barCategoryGap: 0,
+//                        // data: inflationData,
+//                        data: inflationData,
+//                        z: 100,
+//                        itemStyle: {
+//                            normal: {
+//                                color: function(params){
+//                                    // 柱状图每根柱子颜色
+//                                    var colorList = ['#F75D5D','#59ED4F','#4C91E7'];
+//                                    return colorList[params.dataIndex];
+//                                }
+//                            }
+//                        }
+//                    });
+//                });
+//                console.time('a');
+//                map.setOption(option);
+//                console.timeEnd('a');
+//            }
+//
+//            setTimeout(renderEachCity, 0);
+//            // 缩放和拖拽
+//            function throttle(fn, delay, debounce) {
+//
+//                var currCall;
+//                var lastCall = 0;
+//                var lastExec = 0;
+//                var timer = null;
+//                var diff;
+//                var scope;
+//                var args;
+//
+//                delay = delay || 0;
+//
+//                function exec() {
+//                    lastExec = (new Date()).getTime();
+//                    timer = null;
+//                    fn.apply(scope, args || []);
+//                }
+//
+//                var cb = function() {
+//                    currCall = (new Date()).getTime();
+//                    scope = this;
+//                    args = arguments;
+//                    diff = currCall - (debounce ? lastCall : lastExec) - delay;
+//
+//                    clearTimeout(timer);
+//
+//                    if (debounce) {
+//                        timer = setTimeout(exec, delay);
+//                    } else {
+//                        if (diff >= 0) {
+//                            exec();
+//                        } else {
+//                            timer = setTimeout(exec, -diff);
+//                        }
+//                    }
+//
+//                    lastCall = currCall;
+//                };
+//
+//                return cb;
+//            }
+//
+//            var throttledRenderEachCity = throttle(renderEachCity, 0);
+////            myChart.on('geoRoam', throttledRenderEachCity);
+////            myChart.setOption(option);
+//
+//
+//
+//            var map = ec.init(document.getElementById('map'));
+//
+//            map.on('geoRoam', throttledRenderEachCity);
+//            map.setOption(optionMap);
+//
+//
+//            // 点击显示柱状图
+//            map.on('click',function(e){
+//                console.log(e)
+//                // console.log(params);
+//                if(e.componentSubType == "bar"){
+//                    // 先清除所有柱状图
+//                    $('.tongJiTu').remove();
+//                    // 创建遮挡层
+//                    creatWrap();
+//                    // 创建柱状图容器
+//                    var divObj = document.createElement('div');
+//                    $(divObj).addClass('tongJiTu');
+//                    divObj.id = 'zhuzhuang';
+//                    var divX = getMousePos()['x'];
+//                    var divY = getMousePos()['y'];
+//                    $(divObj).css({
+//                        'width': 250,
+//                        'height': 180,
+//                        'border': '1px solid #ccc',
+//                        'position': 'absolute',
+//                        'top': divY,
+//                        'left': divX
+//                    }).appendTo('.wrap');
+//                    // 创建柱状图
+//                    zhuZhuangTu();
+//                    // 点击遮挡层消失
+//                    clearWrap('.zhedang');
+//                }
+//                return;
+//            });
+//            // 获取横纵坐标
+//            function getMousePos(e) {
+//                var e = event || window.event;
+//                var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+//                var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+//                var x = e.pageX || e.clientX + scrollX;
+//                var y = e.pageY || e.clientY + scrollY;
+//                // console.log(x,y)
+//                return {'x': x,'y': y};
+//            }
+//            // 生成柱状图
+//            function zhuZhuangTu() {
+//                var zhuzhuang = echarts.init(document.getElementById('zhuzhuang'));
+//                option = {
+//                    backgroundColor: 'rgba(255,255,255,.3)',
+//                    legend: {
+//                        data: ['数据A','数据B','数据C']
+//                    },
+//                    xAxis: [
+//                        {
+//
+//                            type: 'category',
+//                            data: ['数据A','数据B','数据C']
+//                        }
+//                    ],
+//                    yAxis: [
+//                        {
+//                            splitLine: {
+//                                show: false
+//                            },
+//                            type: 'value'
+//                        }
+//                    ],
+//                    series: [
+//                        {
+//                            type: 'bar',
+//                            itemStyle: {
+//                                normal: {
+//                                    color: function(params){
+//                                        var colorList = ['#F75D5D','#59ED4F','#4C91E7'];
+//                                        return colorList[params.dataIndex];
+//                                    },
+//                                    label: {
+//                                        show: true,
+//                                        position: 'top',
+//                                        textStyle: {
+//                                            color: '#000'
+//                                        }
+//                                    }
+//                                }
+//                            },
+//                            data: [10,20,30]
+//                        }
+//                    ]
+//                };
+//                zhuzhuang.setOption(option);
+//            }
+//            // 生成遮挡层
+//            function creatWrap(){
+//                var zheDang = document.createElement('div');
+//                $(zheDang).addClass('zhedang').css({
+//                    width: '100%',
+//                    height: '100%',
+//                    position: 'absolute',
+//                    top: 0,
+//                    left: 0,
+//                    backgroundColor: 'rgba(0,0,0,.2)'
+//                }).appendTo('.wrap');
+//            }
+//            // 去掉遮挡层
+//            function clearWrap(id){
+//                $(id).click(function(e){
+//                    // console.log(this);
+//                    this.remove();
+//                    $('.tongJiTu').remove();
+//                    return false;
+//                });
+//            }
+
+
+        });
+    }
+
+
+
+    map.on('click', function (params) {
+        mapF(params.name+'.json');
+        detail(params.name);
+
+
+        $(".dingwei .dw-qv").html(params.name)
+        $("#back").show();
+        $("#fugai").html("覆盖乡镇")
+    });
+    $("#back").click(function(){
+        mapF('南京市.json');
+        detail('南京');
+
+        $(".dingwei .dw-qv").html('')
+        $("#back").hide();
+        $("#fugai").html("覆盖区县")
+    })
+
+
+
+
+
+    function chart(name){
+
+        console.log("加载图表数据-"+name)
+
+
+        var dataZoom = [                                      //区域缩放
+            {
+                height: 8,
+                id: 'dataZoomX',
+                show: true,                              //是否显示 组件。如果设置为 false，不会显示，但是数据过滤的功能还存在。
+                backgroundColor: "#cddffc",  //组件的背景颜色
+                type: 'slider',                         //slider表示有滑动块的，inside表示内置的
+                dataBackground: {                        //数据阴影的样式。
+                    lineStyle: {
+                        color: '#349cf7',
+                        width: 1,
+                        type: 'solid'
+                    },              //阴影的线条样式
+                    areaStyle: {
+                        color: '#349cf7',
+                    },              //阴影的填充样式
+                },
+                fillerColor: "#349cf7",  //选中范围的填充颜色。
+                borderColor: "#349cf7",                     //边框颜色。
+                filterMode: 'filter',                   //'filter'：当前数据窗口外的数据，被 过滤掉。即 会 影响其他轴的数据范围。每个数据项，只要有一个维度在数据窗口外，整个数据项就会被过滤掉。
+                //'weakFilter'：当前数据窗口外的数据，被 过滤掉。即 会 影响其他轴的数据范围。每个数据项，只有当全部维度都在数据窗口同侧外部，整个数据项才会被过滤掉。
+                //'empty'：当前数据窗口外的数据，被 设置为空。即 不会 影响其他轴的数据范围。
+                //'none': 不过滤数据，只改变数轴范围。
+                start: 0,                                //数据窗口范围的起始百分比,表示30%
+                end: 70,                                  //数据窗口范围的结束百分比,表示70%
+                startValue: 10,                           //数据窗口范围的起始数值
+                endValue: 100,                            //数据窗口范围的结束数值。
+                orient: "horizontal",                    //布局方式是横还是竖。不仅是布局方式，对于直角坐标系而言，也决定了，缺省情况控制横向数轴还是纵向数轴。'horizontal'：水平。'vertical'：竖直。
+                zoomLock: false,                          //是否锁定选择区域（或叫做数据窗口）的大小。如果设置为 true 则锁定选择区域的大小，也就是说，只能平移，不能缩放。
+                throttle: 100,                             //设置触发视图刷新的频率。单位为毫秒（ms）。
+                zoomOnMouseWheel: true,                  //如何触发缩放。可选值为：true：表示不按任何功能键，鼠标滚轮能触发缩放。false：表示鼠标滚轮不能触发缩放。'shift'：表示按住 shift 和鼠标滚轮能触发缩放。'ctrl'：表示按住 ctrl 和鼠标滚轮能触发缩放。'alt'：表示按住 alt 和鼠标滚轮能触发缩放。
+                moveOnMouseMove: true,                   //如何触发数据窗口平移。true：表示不按任何功能键，鼠标移动能触发数据窗口平移。false：表示鼠标滚轮不能触发缩放。'shift'：表示按住 shift 和鼠标移动能触发数据窗口平移。'ctrl'：表示按住 ctrl 和鼠标移动能触发数据窗口平移。'alt'：表示按住 alt 和鼠标移动能触发数据窗口平移。
+                left: "20%",                           //组件离容器左侧的距离,'left', 'center', 'right','20%'
+                top: "auto",                                //组件离容器上侧的距离,'top', 'middle', 'bottom','20%'
+                right: "20%",                             //组件离容器右侧的距离,'20%'
+                bottom: "3%",                            //组件离容器下侧的距离,'20%'
+
+            }];
+        var option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                show: false,					//---是否显示直角坐标系网格
+                top: "15%",						//---相对位置，top\bottom\left\right
+                right: "5%",
+                left: '10%',
+                bottom: '25%',
+                containLabel: false,			//---grid 区域是否包含坐标轴的刻度标签
+            },
+            dataZoom: dataZoom,
+            legend: {
+
+                data: [],
+
+                top: 0,
+                right: 50,
+                textStyle: {
+                    color: '#999',
+                    fontSize: 12
+
+                },
+
+                icon: 'rect',
+
+                itemWidth: 10,
+
+                itemHeight: 10,
+
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    axisLabel: {
+                        color: "#999"
+                    },
+                    axisLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#f0f1f2',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {					//---grid 区域中的分隔线
+                        show: false,					//---是否显示，'category'类目轴不显示，此时我的X轴为类目轴，splitLine属性是无意义的
+                        lineStyle: {
+                            color: '#0f3369',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    },
+                    data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '',
+                    min: 0,
+//                interval: 2,
+                    axisLabel: {
+                        formatter: '{value} ',
+
+                    },
+                    axisLine: {
+                        show: false,
+                        lineStyle: {
+                            color: '#999',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {					//---grid 区域中的分隔线
+                        show: true,					//---是否显示，'category'类目轴不显示，此时我的X轴为类目轴，splitLine属性是无意义的
+                        lineStyle: {
+                            color: '#f0f1f2',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    }
+                }
+            ],
+            series: []
+        };
+
+
+        var data = [
+            {
+                "name": '已完成',
+                "data": [140, 240, 260, 280, 330, 300, 320, 360, 450]
+            }, {
+                "name": '办理中',
+                "data": [120, 220, 220, 270, 320, 280, 280, 320, 420]
+
+
+            },
+            {
+                "name": '预警',
+                "data": [100, 200, 200, 250, 300, 260, 290, 300, 400]
+
+
+            }
+        ]
+        var color1 = ["rgba(48,145,247,1)", "rgba(90,198,127,1)","rgba(239,95,58,1)"]
+        var color2 = [new echarts.graphic.LinearGradient(
+            0, 0, 0, 1,
+            [
+                {offset: 0, color: 'rgba(48,145,247,1)'},
+                {offset: 0.3, color: 'rgba(48,145,247, 0.2)'},
+                {offset: 1, color: 'rgba(48,145,247, 0)'}
+            ]
+        ), new echarts.graphic.LinearGradient(
+            0, 0, 0, 1,
+            [
+                {offset: 0, color: 'rgba(90,198,127,1)'},
+                {offset: 0.3, color: 'rgba(90,198,127, 0.2)'},
+                {offset: 1, color: 'rgba(90,198,127, 0)'}
+            ]
+        ), new echarts.graphic.LinearGradient(
+            0, 0, 0, 1,
+            [
+                {offset: 0, color: 'rgba(239,95,58,1)'},
+                {offset: 0.3, color: 'rgba(239,95,58, 0.2)'},
+                {offset: 1, color: 'rgba(239,95,58, 0)'}
+            ]
+        )]
+
+        for (var i = 0; i < data.length; i++) {
+            option.series.push({
+                name: data[i].name,
+                type: 'line',
+//            smooth: true,
+                itemStyle: {
+                    normal: {
+                        color: color1[i], // 折线条的颜色
+                        borderColor: color1[i], // 拐点边框颜色
+//                    areaStyle: {
+//                        color: color2[i]
+//                    }
+                    }
+                },
+                data: data[i].data
+
+            });
+            option.legend.data.push(
+                data[i].name
+            );
+        }
+        // 基于准备好的dom，初始化echarts实例
+        var line1 = echarts.init(document.getElementById('line1'));
+        // 使用刚指定的配置项和数据显示图表。
+        line1.setOption(option);
+
+
+        var option2 = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                show: false,					//---是否显示直角坐标系网格
+                top: "15%",						//---相对位置，top\bottom\left\right
+                right: "5%",
+                left: '10%',
+                bottom: '25%',
+                containLabel: false,			//---grid 区域是否包含坐标轴的刻度标签
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    axisLabel: {
+                        color: "#999"
+                    },
+                    axisLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#f0f1f2',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {					//---grid 区域中的分隔线
+                        show: false,					//---是否显示，'category'类目轴不显示，此时我的X轴为类目轴，splitLine属性是无意义的
+                        lineStyle: {
+                            color: '#0f3369',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    },
+                    data: ['2016', '2017', '2018', '2019', '2020']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '',
+                    min: 0,
+//                interval: 2,
+                    axisLabel: {
+                        formatter: '{value} ',
+
+                    },
+                    axisLine: {
+                        show: false,
+                        lineStyle: {
+                            color: '#999',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {					//---grid 区域中的分隔线
+                        show: true,					//---是否显示，'category'类目轴不显示，此时我的X轴为类目轴，splitLine属性是无意义的
+                        lineStyle: {
+                            color: '#f0f1f2',
+                            width: 1,
+                            type: 'solid',
+                        },
+                    }
+                }
+            ],
+            series: [{
+                name: '',
+                type: 'line',
+                smooth: true,
+                itemStyle: {
+                    normal: {
+                        color: "#3693f7", // 折线条的颜色
+                        borderColor: "#3693f7", // 拐点边框颜色
+                    }
+                },
+                "data": [1400, 2400, 2600, 2800, 3300]
+
+            }]
+        };
+
+        // 基于准备好的dom，初始化echarts实例
+        var line2 = echarts.init(document.getElementById('line2'));
+        // 使用刚指定的配置项和数据显示图表。
+        line2.setOption(option2);
+
+
+        var option3 = {
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                top:'10%',
+                left: '5%',
+                right: '3%',
+                bottom: '10%',
+                containLabel: true
+            },
+            dataZoom: [
+                {
+                    type: 'inside'
+                }
+            ],
+            yAxis:  {
+                type: 'value',
+                inverse: false,
+                name:"",
+                axisLine: {
+                    show: false,
+                    lineStyle: {
+                        color: '#eff2f8',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#999',
+//                    fontSize: 24
+                    },
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#eff2f8',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+            },
+            xAxis: {
+                type: 'category',
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#eff2f8',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                axisTick: {
+                    show: true,
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#999',
+//                    fontSize: 24,
+                    },
+                },
+                splitLine: {
+                    show: false,
+                    lineStyle: {
+                        color: '#999',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                data: ['玄武区','秦淮区','鼓楼区','浦口区','栖霞区','雨花台区','江宁区']
+            },
+            series: [
+                {
+                    name: '',
+                    type: 'bar',
+                    barWidth: 20,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'top',
+//                        fontSize:24,
+                            color:'#999'
+                        }
+                    },
+                    itemStyle: { // 柱条样式。
+                        normal: {
+                            barBorderRadius: [10, 10, 0, 0],
+                            color:"#2585f7"
+                        }
+                    },
+                    data: [40, 50, 60, 70, 40, 50, 60, 70]
+                }
+            ]
+        };
+        var bar2 = echarts.init(document.getElementById("bar2"));
+        bar2.setOption(option3);
+
+
+
+//        点击柱状图刷新左侧环形图
+        bar2.on('click', function (params) {
+            console.log(params)
+            $(".range").html(params.name);
+            pieData = params.data;
+            pie1.clear();
+
+            option4.graphic[0].style.text=pieData+'%';
+            option4.series[0].data=[
+                {value:(100 - pieData), name:'超时'},
+                {value:pieData, name:'准时'},
+            ]
+            pie1.setOption(option4);
+            console.log(pieData)
+
+        });
+
+
+
+
+
+        var pieData = 99;
+        var option4 = {
+            color:['#f5ab41','#3ca8f8'],
+            calculable : false,
+            graphic: [{ //环形图中间添加文字
+                type: 'text', //通过不同top值可以设置上下显示
+                left: 'center',
+                top: '38%',
+                style: {
+                    text: pieData+'%',
+                    textAlign: 'center',
+                    fill: '#000', //文字的颜色
+                    width: 40,
+                    height: 40,
+                    fontSize: 30,
+                    fontFamily: "Microsoft YaHei"
+                }
+            },{ //环形图中间添加文字
+                type: 'text', //通过不同top值可以设置上下显示
+                left: 'center',
+                top: '53%',
+                style: {
+                    text: '审批准时率',
+                    textAlign: 'center',
+                    fill: '#000', //文字的颜色
+                    width: 60,
+                    height: 30,
+                    fontSize: 18,
+                    fontFamily: "Microsoft YaHei"
+                }
+            }],
+            series : [
+                {
+                    name:'',
+                    type:'pie',
+                    radius : ['50%', '70%'],
+                    center: ["50%", '50%'],
+                    itemStyle : {
+                        normal : {
+                            label : {
+                                show : true
+                            },
+                            labelLine : {
+                                show : true
+                            }
+                        },
+                        emphasis : {
+                            label : {
+                                show : false,
+                                position : 'center',
+                                textStyle : {
+//                                fontSize : '24',
+                                    // fontWeight : 'bold'
+                                }
+                            }
+                        }
+                    },
+                    data:[
+                        {value:(100 - pieData), name:'超时'},
+                        {value:pieData, name:'准时'},
+                    ]
+                }
+            ]
+        };
+        var pie1 = echarts.init(document.getElementById("pie1"));
+        pie1.setOption(option4);
+
+
+
+        var index = 0
+        var colorList = ['#f36c6c', '#e6cf4e', '#20d180', '#0093ff'];
+
+        var option5 = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                top: '3%',
+                left: '15%',
+                right: '2%',
+                bottom: '3%',
+                containLabel: true
+
+            },
+            xAxis: {
+                type: 'value',
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: false
+                },
+                axisLabel: {
+                    show: false
+
+                },
+                splitLine: {
+                    show: false
+                }
+            },
+            yAxis: [{
+                type: 'category',
+                //   boundaryGap: true,
+                inverse: true, // 反向
+                axisTick: 'none',
+                axisLine: 'none',
+                axisLabel: {
+                    //								margin: 150,
+                    //								align: 'left',
+                    textStyle: {
+                        color: '#333',
+                        fontSize: '12',
+                        align: 'right',
+                        baseline: 'middle'
+                    },
+                    rich: {
+                        a1: {
+                            color: 'transparent',
+                            backgroundColor: {
+                                image: "images/no1.png"
+                            },
+                            width: 16,
+                            height: 20,
+                            align: 'center',
+
+                        },
+                        a2: {
+                            color: 'transparent',
+                            backgroundColor: {
+                                image: "images/no2.png"
+                            },
+                            width: 16,
+                            height: 20,
+                            align: 'center',
+
+                        },
+                        a3: {
+                            color: 'transparent',
+                            backgroundColor: {
+                                image: "images/no3.png"
+                            },
+                            width: 16,
+                            height: 20,
+                            align: 'center',
+
+                        },
+                        b: {
+                            color: '#333',
+                            width: 60,
+                            height: 20,
+                            align: 'center',
+                            //										backgroundColor: "#eff2f5"
+
+                        }
+                    },
+                    formatter: function(params) {
+                        //																		console.log(params)
+                        let text = params
+                        if(text.length > 4) {
+                            text = text.slice(0, 4) + '...'
+                        } else {
+
+                        }
+
+                        if(index == 3) {
+                            index = 0
+                        }
+                        index++
+
+                        return [
+                            '{a' + index + '|' + index + '}',
+                            '{b|' + text + '}'
+                        ].join(' ')
+                    }
+
+                },
+                data: ['江宁区','玄武区','鼓楼区']
+            },
+                {
+                    axisTick: 'none',
+                    axisLine: 'none',
+                    inverse: true, // 反向
+                    type: 'category',
+                    axisLabel: {
+                        margin: 10,
+                        textStyle: {
+                            color: '#333',
+                            fontSize: '14'
+                        }
+                    },
+                    data: [1000,900,800]
+                }
+            ],
+            series: [{
+                name: '',
+                type: 'bar',
+                barWidth: 11,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'insideLeft',
+                        formatter: '{c}',
+                        textStyle: {
+                            color: '#fff'
+
+                        }
+                    }
+                },
+                itemStyle: {
+
+                    normal: {
+                        barBorderRadius: [0, 30, 30, 0],
+                        color: "#356ff6",
+                        textStyle: {
+                            color: '#333'
+
+                        }
+                    }
+                },
+
+                data: [1000,900,800]
+            }
+
+            ]
+        }
+        var bar3 = echarts.init(document.getElementById("bar3"));
+        bar3.setOption(option5);
+
+
+        option6 = {
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                top:'10%',
+                left: '5%',
+                right: '3%',
+                bottom: '10%',
+                containLabel: true
+            },
+            yAxis:  {
+                type: 'value',
+                max: function(value) {return value.max;},
+                inverse: false,
+                name:"",
+                axisLine: {
+                    show: false,
+                    lineStyle: {
+                        color: '#eff2f8',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#999',
+//                    fontSize: 24
+                    },
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#eff2f8',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+            },
+            xAxis: {
+                type: 'category',
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#eff2f8',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                axisTick: {
+                    show: true,
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#999',
+//                    fontSize: 24,
+                    },
+                },
+                splitLine: {
+                    show: false,
+                    lineStyle: {
+                        color: '#999',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+            },
+            series: [
+                {
+                    name: '',
+                    type: 'bar',
+                    stack:'总量',
+                    barWidth: 20,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'top',
+//                        fontSize:24,
+                            color:'#999'
+                        }
+                    },
+                    itemStyle: { // 柱条样式。
+                        normal: {
+                            barBorderRadius: [10, 10, 0, 0],
+                            color:"transparent"
+                        }
+                    },
+                    data: [4, 7, 3, 6, 3, 5, 3, 2,9, 7, 3, 6]
+                },
+                {
+                    name: '',
+                    type: 'bar',
+                    stack:'总量',
+                    barWidth: 20,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'top',
+//                        fontSize:24,
+                            color:'#999'
+                        }
+                    },
+                    itemStyle: { // 柱条样式。
+                        normal: {
+                            barBorderRadius: [10],
+                            color:"#deecfd"
+                        },
+                        emphasis : {
+                            barBorderRadius: [10],
+                            color:"#2585f7"
+                        }
+                    },
+                    data: [1, 4, 10, 12, 16, 19, 20, 28,10, 4, 10, 12]
+                }
+            ]
+        };
+
+
+
+        var bar1 = echarts.init(document.getElementById("bar1"));
+        bar1.setOption(option6);
+
+    }
+
+
+    function detail(name,city){
+        console.log("加载数据-"+name)
+        $(".dingwei .dw-shi").html(city)
+
+
+        if(name=='栖霞区'){
+            $("#table1 tbody").html('<tr><td>仙林中医院项目</td><td>栖霞区</td><td>审评中</td><td>5天</td><td>2天</td></tr><tr><td>紫泉综合能源云平台</td><td>栖霞区</td><td>审评中</td><td>10天</td><td>0天</td></tr><tr><td>锥体棱镜加工项目</td><td>栖霞区</td><td>审评中</td><td>10天</td><td>0天</td></tr><tr><td>装饰板生产项目</td><td>栖霞区</td><td>审评中</td><td>10天</td><td>0天</td></tr><tr><td>装配式预制构建生产项目</td><td>栖霞区</td><td>审评中</td><td>10天</td><td>0天</td></tr>')
+            $("#yujing").html('<li><span>紫泉综合能源云平台</span><span class="chaoshi"></span></li>')
+
+        }else if(name=='江宁区'){
+            $("#table1 tbody").html('<tr><td>自主可控服务器存储生产项目</td><td>江宁区</td><td>审评中</td><td>7天</td><td>0天</td></tr><tr><td>自粘PVC地板生产项目</td><td>江宁区</td><td>审评中</td><td>7天</td><td>3天</td></tr><tr><td>自动化血压表生产技术改造项目</td><td>江宁区</td><td>审评中</td><td>7天</td><td>3天</td></tr><tr><td>自动化系统集成设备研发制造</td><td>江宁区</td><td>审评中</td><td>7天</td><td>3天</td></tr><tr><td>自动化水泵生产线技改项目</td><td>江宁区</td><td>审评中</td><td>7天</td><td>3天</td></tr>')
+            $("#yujing").html('<li><span>自主可控服务器存储生产项目</span><span class="chaoshi"></span></li><li><span>自粘PVC地板生产项目</span><span class="chaoshi"></span></li>')
+        }else{
+            $("#table1 tbody").html('<tr><td>纵六路二期建设工程</td><td>鼓楼区</td><td>审评中</td><td>7天</td><td>3天</td></tr><tr><td>总部及研发中心项目</td><td>玄武区</td><td>审评中</td><td>7天</td><td>3天</td></tr><tr><td>综合种养基地建设项目</td><td>鼓楼区</td><td>审评中</td><td>7天</td><td>3天</td></tr><tr><td>综合研发大楼项目</td><td>玄武区</td><td>审评中</td><td>7天</td><td>3天</td></tr><tr><td>综合交易六区消防改造项目</td><td>鼓楼区</td><td>审评中</td><td>7天</td><td>3天</td></tr>')
+            $("#yujing").html('<li><span>纵六路二期建设工程</span><span class="chaoshi"></span></li><li><span>总部及研发中心项目</span><span class="chaoshi"></span></li><li><span>综合种养基地建设项目</span><span class="chaoshi"></span></li><li><span>综合研发大楼项目</span><span class="chaoshi"></span></li><li><span>综合交易六区消防改造项目</span><span class="chaoshi"></span></li><li><span>自助式数据智能分析服务平台</span><span class="chaoshi"></span></li>')
+        }
+
+
+        var data0=[{
+            "name":"水土保持方案",
+            "value":"2",
+            "status":"1"
+        },{
+            "name":"地震安全性评价",
+            "value":"3",
+            "status":"1"
+        },{
+            "name":"文物保护方案",
+            "value":"3",
+            "status":"2"
+        }]
+        var data1=[{
+            "name":"预审测绘",
+            "value":"4",
+            "status":"1"
+        },{
+            "name":"设计方案联合审查",
+            "value":"3",
+            "status":"1"
+        },{
+            "name":"建设工程规划许可",
+            "value":"3",
+            "status":"1"
+        },{
+            "name":"水土保持方案",
+            "value":"3",
+            "status":"1"
+        }]
+        var data2=[{
+            "name":"联合审图",
+            "value":"5",
+            "status":"1"
+        },{
+            "name":"建设工程施工许可",
+            "value":"2",
+            "status":"1"
+        },{
+            "name":"质量安全监督手续办理",
+            "value":"3",
+            "status":"2"
+        }]
+        var data3=[{
+            "name":"人防工程质量监督",
+            "value":"6",
+            "status":"1"
+        },{
+            "name":"合并办理",
+            "value":"4",
+            "status":"1"
+        },{
+            "name":"联合验收",
+            "value":"4",
+            "status":"1"
+        }]
+        var data4=[{
+            "name":"不动产登记",
+            "value":"7",
+            "status":"1"
+        },{
+            "name":"消防设计方案审查",
+            "value":"4",
+            "status":"1"
+        },{
+            "name":"环保设计方案审查",
+            "value":"4",
+            "status":"2"
+        },{
+            "name":"建设工程规划许可",
+            "value":"3",
+            "status":"1"
+        }]
+
+
+        var dataArr=[data0,data1,data2,data3,data4];
+
+        var detail1=dataArr[0]
+
+        var ul=''
+        for(var i=0;i<detail1.length;i++){
+            var li='<li><a href="javascript:"><div class="text"><p>'+detail1[i].name+'</p><p>办理中：'+detail1[i].value+'天</p></div><div class="btn status'+detail1[i].status+'">正在办理</div></a></li>'
+            ul+=li
+        }
+
+        $("#detail1 ul").html(ul);
+
+
+
+
+        $("#table1 tbody tr").off().on("click",function(){
+
+
+
+            var sjs=$(this).index();
+
+            var detail1=dataArr[sjs]
+
+                var ul=''
+                for(var i=0;i<detail1.length;i++){
+                    var li='<li><a href="javascript:"><div class="text"><p>'+detail1[i].name+'</p><p>办理中：'+detail1[i].value+'天</p></div><div class="btn status'+detail1[i].status+'">正在办理</div></a></li>'
+                    ul+=li
+                }
+
+                $("#detail1 ul").html(ul);
+
+
+        })
+
+    }
+
+
+
+
+
+//    切换定位
+    $(".head-right .city .select_ul li").off().on("click",function(){
+
+
+        if($(this).html()=='南京'){
+            mapF('南京市.json');
+            chart();
+            detail("","南京市")
+        }else{
+            mapF('佛山市.json');
+            chart();
+            detail("","佛山市")
+        }
+
+
+    })
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html style="height: 100%;display: none">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>模拟项目</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+    <link href="layui/css/layui.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/banlixiangmu.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="page_father">
+    <div class="head clearfix">
+        <a href="#" class="logo fl">
+            <img src="images/logo.png" alt="">
+        </a>
+        <i class="logo-line fl"></i>
+        <div class="head-search fl">
+            <input type="text" placeholder="事项   部门   类型   政策">
+            <i class="icon"></i>
+        </div>
+
+
+        <div class="head-right fr">
+            <div class="info fl clearfix">
+                <span class="touxiang fl">
+                    <img src="images/tx.jpeg" alt="">
+                </span>
+                <span class="fl">Hi,王志</span>
+            </div>
+            <i class="logo-line fl"></i>
+            <div class="city fl">
+                <span class="fl">城市：</span>
+                <select id="select" class="select fl" name="state" data-value="0">
+                    <option value="0">佛山</option>
+                    <option value="1">南京</option>
+                </select>
+            </div>
+
+            <div class="weather fl">
+                <img src="images/duoyun.png" class="fl" alt="">
+                <div class="fl">
+                    <p class="wd">23°</p>
+                    <p>空气：良</p>
+                </div>
+            </div>
+            <i class="logo-line fl"></i>
+            <div class="date fl">
+                <p class="time">15:40</p>
+                <p>2020/9/9</p>
+            </div>
+
+            <a href="#" class="logout fl"></a>
+
+        </div>
+
+    </div>
+    <div style="height:0.75rem;width:100%"></div>
+    <div class="banner" id="banner">
+        <div class="code code1">
+            <img src="images/code.png" alt="">
+        </div>
+        <div class="code code2">
+            <img src="images/code.png" alt="">
+        </div>
+        <a href="#" class="banner-down"></a>
+    </div>
+
+    <div class="main clearfix">
+        <div class="menu fl">
+            <ul>
+                <li>
+                    <a href="#">首页<i class="right-icon"></i></a>
+                </li>
+                <li>
+                    <a href="#">咨询管理<i class="right-icon"></i></a>
+                </li>
+                <li>
+                    <a href="#">预受理管理<i class="right-icon"></i></a>
+                </li>
+                <li class="active">
+                    <a href="javascript:" class="hasChild">办理用户<i class="right-icon"></i></a>
+                    <ul class="child-ul">
+                        <li class="active">
+                            <a href="#">用户管理</a>
+                        </li>
+                        <li>
+                            <a href="#">业务办理</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">受理信息管理<i class="right-icon"></i></a>
+                </li>
+                <li>
+                    <a href="#">设备管理<i class="right-icon"></i></a>
+                </li>
+                <li>
+                    <a href="#">系统管理<i class="right-icon"></i></a>
+                </li>
+                <li>
+                    <a href="#">统计分析<i class="right-icon"></i></a>
+                </li>
+            </ul>
+
+            <div class="fix-left layui-form  clearfix">
+                <span>固定为侧栏</span>
+                <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
+            </div>
+        </div>
+        <div class="content fl">
+            <div class="mbx"><a href="#"><i class="shouye-icon"></i>首页</a>-<a href="#">办理项目</a></div>
+            <p class="big-title">XXXXX项目名称</p>
+            <div class="floor floor1 clearfix">
+                <div class="floor1-center card">
+                    <p class="normal-title2">项目代码：20200914001
+
+
+                        <a href="javascript:" class="guanzhu">关注+</a>
+                    <span class="fr tubiao">
+                        <a href="javascript:">办理中</a>
+                        <a href="javascript:">待办理</a>
+                        <a href="javascript:">预警</a>
+                    </span>
+                    </p>
+
+                    <div class="chart" id="bar1"></div>
+
+                </div>
+
+
+            </div>
+            <div class="floor floor2 clearfix">
+                <div class="floor2-left card fl">
+                   <div class="normal-title2">
+                       <ul>
+                            <li>总周期：66</li>
+                            <li>已办理天数：8</li>
+                            <li>剩余天数：56</li>
+                        </ul>
+                       <span class="open"></span>
+                   </div>
+                    <div class="lct">
+                    </div>
+
+                </div>
+                <div class="floor2-right card fl">
+                    <div class="style1">
+                         <ul class="flex">
+                             <li>
+                                <p class="num">20</p>
+                                <p>事项总数</p>
+                             </li>
+                             <li>
+                                 <p class="num">15</p>
+                                 <p>主要事项</p>
+                             </li>
+                             <li>
+                                 <p class="num">20</p>
+                                 <p>预计天数</p>
+                             </li>
+                         </ul>
+                    </div>
+
+                    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">筛选条件可选</li>
+                            <li>注意事项</li>
+                        </ul>
+                        <div class="layui-tab-content" style="">
+                            <div class="layui-tab-item layui-show">
+                                <div class="style7">
+                                    <ul>
+                                        <li>
+                                            <div class="select-div style7-select">
+                                                <select id="select1" class="select fl" name="state1">
+                                                    <option value="0" data-name="0">立项类型</option>
+                                                    <option value="1" data-name="审批">审批</option>
+                                                    <option value="2" data-name="核准">核准</option>
+                                                    <option value="3" data-name="备案">备案</option>
+                                                    <option value="4" data-name="其他">其他</option>
+                                                </select>
+                                            </div>
+
+
+                                        </li>
+                                        <li>
+                                            <div class="select-div style7-select">
+                                                <select id="select2" class="select fl" name="state2">
+                                                    <option value="0" data-name="0">投资类型</option>
+                                                    <option value="1" data-name="政府">政府</option>
+                                                    <option value="2" data-name="社会">社会</option>
+                                                    <option value="3" data-name="其他">其他</option>
+                                                </select>
+                                            </div>
+
+
+                                        </li>
+
+                                        <li>
+                                            <div class="select-div style7-select">
+                                                <select id="select3" class="select fl" name="state2">
+                                                    <option value="0" data-name="0">项目类型</option>
+                                                    <option value="1" data-name="政府">政府</option>
+                                                    <option value="2" data-name="社会">社会</option>
+                                                    <option value="3" data-name="其他">其他</option>
+                                                </select>
+                                            </div>
+
+
+                                        </li>
+
+                                    </ul>
+                                    <a href="#" class="jiaoliu">发起讨论交流</a>
+                                </div>
+                            </div>
+                            <div class="layui-tab-item">
+                                <div class="style2">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:">
+                                                <div class="text">
+                                                    <p>15压覆矿查询</p>
+                                                    <p>办理中：3天</p>
+                                                </div>
+                                                <div class="btn status1">
+                                                    正在办理
+                                                </div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="javascript:">
+                                                <div class="text">
+                                                    <p>15压覆矿查询</p>
+                                                    <p>办理中：3天</p>
+                                                </div>
+                                                <div class="btn status1">
+                                                    正在办理
+                                                </div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="javascript:">
+                                                <div class="text">
+                                                    <p>15压覆矿查询</p>
+                                                    <p>办理中：3天</p>
+                                                </div>
+                                                <div class="btn status1">
+                                                    正在办理
+                                                </div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="javascript:">
+                                                <div class="text">
+                                                    <p>15压覆矿查询</p>
+                                                    <p>办理中：3天</p>
+                                                </div>
+                                                <div class="btn status1">
+                                                    正在办理
+                                                </div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="javascript:">
+                                                <div class="text">
+                                                    <p>15压覆矿查询</p>
+                                                    <p>办理中：3天</p>
+                                                </div>
+                                                <div class="btn status2">
+                                                    待办理
+                                                </div>
+                                            </a>
+
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="jiaoliu">发起讨论交流</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="floor floor3 clearfix">
+                <div class="floor3-child card fl">
+                    <p class="normal-title1">第一阶段事项</p>
+                    <div class="style3">
+                        <ul>
+                            <li class="status1">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：已办理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：待办理</span>
+                                </a>
+                            </li>
+
+                            <li class="status2">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：预警</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：待办理</span>
+                                </a>
+                            </li>
+                            <li class="status1">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：已办理</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="floor3-child card fl">
+                    <p class="normal-title1">第二阶段事项</p>
+                    <div class="style3">
+                        <ul>
+                            <li class="status3">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：正在办理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：待办理</span>
+                                </a>
+                            </li>
+
+                            <li class="status2">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：预警</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：待办理</span>
+                                </a>
+                            </li>
+                            <li class="status1">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：已办理</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+                <div class="floor3-child card fl">
+                    <p class="normal-title1">第三阶段事项</p>
+                    <div class="style3">
+                        <ul>
+                            <li class="status1">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：已办理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：待办理</span>
+                                </a>
+                            </li>
+
+                            <li class="status2">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：预警</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：待办理</span>
+                                </a>
+                            </li>
+                            <li class="status1">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：已办理</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+                <div class="floor3-child card fl">
+                    <p class="normal-title1">第四阶段事项</p>
+                    <div class="style3">
+                        <ul>
+                            <li class="status1">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：已办理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：待办理</span>
+                                </a>
+                            </li>
+
+                            <li class="status2">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：预警</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：待办理</span>
+                                </a>
+                            </li>
+                            <li class="status1">
+                                <a href="javascript:">
+                                    <span>名称：XXXXX名称</span>
+                                    <span>责任部门：XXX部门</span>
+                                    <span>天数：3</span>
+                                    <span class="status">状态：已办理</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="floor floor4 clearfix">
+
+                <p class="normal-title3">项目或事项详情</p>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="style6">
+                                <p class="title">
+                                    房屋建筑和市政基础设施工程（燃气、
+                                    环境卫生、风景园林工程）勘察文件
+                                    审查备案
+                                </p>
+
+                                <p>审批部门：住建部 </p>
+                                <p>审批时限：1（工作日） </p>
+                                <p>结果物：<b>2</b>个 </p>
+
+                                <div class="bottom">
+                                    <a href="#" class="btn fl">关注</a>
+                                    <a href="#" class="btn fr">有情形</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="style6">
+                                <p class="title">
+                                    房屋建筑和市政基础设施工程（燃气、
+                                    环境卫生、风景园林工程）勘察文件
+                                    审查备案
+                                </p>
+
+                                <p>审批部门：住建部 </p>
+                                <p>审批时限：1（工作日） </p>
+                                <p>结果物：<b>2</b>个 </p>
+
+                                <div class="bottom">
+                                    <a href="#" class="btn fl">关注</a>
+                                    <a href="#" class="btn fr">有情形</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="style6">
+                                <p class="title">
+                                    房屋建筑和市政基础设施工程（燃气、
+                                    环境卫生、风景园林工程）勘察文件
+                                    审查备案
+                                </p>
+
+                                <p>审批部门：住建部 </p>
+                                <p>审批时限：1（工作日） </p>
+                                <p>结果物：<b>2</b>个 </p>
+
+                                <div class="bottom">
+                                    <a href="#" class="btn fl">关注</a>
+                                    <a href="#" class="btn fr">有情形</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="style6">
+                                <p class="title">
+                                    房屋建筑和市政基础设施工程（燃气、
+                                    环境卫生、风景园林工程）勘察文件
+                                    审查备案
+                                </p>
+
+                                <p>审批部门：住建部 </p>
+                                <p>审批时限：1（工作日） </p>
+                                <p>结果物：<b>2</b>个 </p>
+
+                                <div class="bottom">
+                                    <a href="#" class="btn fl">关注</a>
+                                    <a href="#" class="btn fr">有情形</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="style6">
+                                <p class="title">
+                                    房屋建筑和市政基础设施工程（燃气、
+                                    环境卫生、风景园林工程）勘察文件
+                                    审查备案
+                                </p>
+
+                                <p>审批部门：住建部 </p>
+                                <p>审批时限：1（工作日） </p>
+                                <p>结果物：<b>2</b>个 </p>
+
+                                <div class="bottom">
+                                    <a href="#" class="btn fl">关注</a>
+                                    <a href="#" class="btn fr">有情形</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="foot">
+        <div class="fl text">
+            <p>客服电话：</p>
+            <p class="phone">400-666-8899</p>
+            <p>copyright 2006-2020 </p>
+        </div>
+        <img src="images/code.png" class="fr" alt="">
+    </div>
+</div>
+
+<!--header end-->
+
+<div id="lct" style="display: none;height:100%;width:100%">
+    <div class="normal-title2">
+        <ul>
+            <li>总周期：66</li>
+            <li>已办理天数：8</li>
+            <li>剩余天数：56</li>
+        </ul>
+    </div>
+    <div class="normal-title1">项目名称</div>
+    <div style="width:100%;height:calc(100% - 1.2rem);position: relative">
+        <iframe src="http://119.45.138.153/tlp/html/t.HTML" width="100%" height="100%" frameborder="0"></iframe>
+        <div style="line-height: 0.3rem;text-align:right;color:#888;font-size:0.14rem;position: absolute;bottom:0.2rem;right:0.3rem">流程图仅供参考，以官方为准</div>
+
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.select.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/echarts.min.js"></script>
+<script type="text/javascript">
+    var whdef = 100 / 1920;// 表示1920的设计图,使用100PX的默认值
+    var wH = window.innerHeight;// 当前窗口的高度
+    var wW = window.innerWidth;// 当前窗口的宽度
+    var rem = wW * whdef;// 以默认比例值乘以当前窗口宽度,得到该宽度下的相应FONT-SIZE值
+    $('html').css('font-size', rem + "px");
+    $('html').css('display', 'block');
+
+    $(window).resize(function () {          //当浏览器大小变化时
+        location.reload();
+    });
+
+
+    //    当前时间
+    setInterval(function(){
+
+        var now=new Date().getTime()/1000
+        var time=formatTime(now,'h:m')
+        var date=formatTime(now,'Y/M/D');
+        $(".head .date").html('<p class="time">'+time+'</p><p>'+date+'</p>');
+
+    },1000)
+
+    function formatTime(number,format) {
+
+        var formateArr  = ['Y','M','D','h','m','s'];
+        var returnArr   = [];
+        var date = new Date(number * 1000);
+        returnArr.push(date.getFullYear());
+        returnArr.push(formatNumber(date.getMonth() + 1));
+        returnArr.push(formatNumber(date.getDate()));
+        returnArr.push(formatNumber(date.getHours()));
+        returnArr.push(formatNumber(date.getMinutes()));
+        returnArr.push(formatNumber(date.getSeconds()));
+        for (var i in returnArr)
+        {
+            format = format.replace(formateArr[i], returnArr[i]);
+        }
+        return format;
+    }
+
+    function formatNumber(n) {
+        n = n.toString()
+        return n[1] ? n : '0' + n
+    }
+
+
+
+    $('#select').select();
+
+
+
+    var h=$(".content").height();
+    $(".menu").css("height",h)
+
+
+    layui.use(['form', 'layedit', 'laydate','element'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate
+            ,element = layui.element;
+
+    });
+
+
+    var h2=parseInt($(".banner").height());
+
+    $(window).scroll(function() {
+        //为了保证兼容性，这里取两个值，哪个有值取哪一个
+        //scrollTop就是触发滚轮事件时滚轮的高度
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//        console.log("滚动距离" + scrollTop);
+        if(scrollTop > h2){
+            $("#banner").hide();
+        }
+    })
+
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+
+
+
+    $(".floor2-left .open").off().on("click",function(){
+        layer.open({
+            type: 1,
+//            title: 'layer mobile页',
+            shadeClose: true,
+            shade: 0.2,
+            area: ['80%', '90%'],
+            content: $("#lct") //iframe的url
+        });
+    })
+
+
+
+
+    var data1=[6,5,18,13,8,27,16,10,3,5,8,13,8,20,16,10];
+    var data2=[-2,-9,-8,-5,-18,-2,-6,-1,-3,-5,-8,-3,-8,-10,-6,-3];
+    option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        dataZoom: [                                      //区域缩放
+            {
+                height: 8,
+                id: 'dataZoomX',
+                show: true,                              //是否显示 组件。如果设置为 false，不会显示，但是数据过滤的功能还存在。
+                backgroundColor: "#cddffc",  //组件的背景颜色
+                type: 'inside',                         //slider表示有滑动块的，inside表示内置的
+                dataBackground: {                        //数据阴影的样式。
+                    lineStyle: {
+                        color: '#349cf7',
+                        width: 1,
+                        type: 'solid'
+                    },              //阴影的线条样式
+                    areaStyle: {
+                        color: '#349cf7',
+                    },              //阴影的填充样式
+                },
+                fillerColor: "#349cf7",  //选中范围的填充颜色。
+                borderColor: "#349cf7",                     //边框颜色。
+                filterMode: 'filter',                   //'filter'：当前数据窗口外的数据，被 过滤掉。即 会 影响其他轴的数据范围。每个数据项，只要有一个维度在数据窗口外，整个数据项就会被过滤掉。
+                //'weakFilter'：当前数据窗口外的数据，被 过滤掉。即 会 影响其他轴的数据范围。每个数据项，只有当全部维度都在数据窗口同侧外部，整个数据项才会被过滤掉。
+                //'empty'：当前数据窗口外的数据，被 设置为空。即 不会 影响其他轴的数据范围。
+                //'none': 不过滤数据，只改变数轴范围。
+                start: 0,                                //数据窗口范围的起始百分比,表示30%
+                end: 50,                                  //数据窗口范围的结束百分比,表示70%
+                startValue: 10,                           //数据窗口范围的起始数值
+                endValue: 100,                            //数据窗口范围的结束数值。
+                orient: "horizontal",                    //布局方式是横还是竖。不仅是布局方式，对于直角坐标系而言，也决定了，缺省情况控制横向数轴还是纵向数轴。'horizontal'：水平。'vertical'：竖直。
+                zoomLock: false,                          //是否锁定选择区域（或叫做数据窗口）的大小。如果设置为 true 则锁定选择区域的大小，也就是说，只能平移，不能缩放。
+                throttle: 100,                             //设置触发视图刷新的频率。单位为毫秒（ms）。
+                zoomOnMouseWheel: true,                  //如何触发缩放。可选值为：true：表示不按任何功能键，鼠标滚轮能触发缩放。false：表示鼠标滚轮不能触发缩放。'shift'：表示按住 shift 和鼠标滚轮能触发缩放。'ctrl'：表示按住 ctrl 和鼠标滚轮能触发缩放。'alt'：表示按住 alt 和鼠标滚轮能触发缩放。
+                moveOnMouseMove: true,                   //如何触发数据窗口平移。true：表示不按任何功能键，鼠标移动能触发数据窗口平移。false：表示鼠标滚轮不能触发缩放。'shift'：表示按住 shift 和鼠标移动能触发数据窗口平移。'ctrl'：表示按住 ctrl 和鼠标移动能触发数据窗口平移。'alt'：表示按住 alt 和鼠标移动能触发数据窗口平移。
+                left: "20%",                           //组件离容器左侧的距离,'left', 'center', 'right','20%'
+                top: "auto",                                //组件离容器上侧的距离,'top', 'middle', 'bottom','20%'
+                right: "20%",                             //组件离容器右侧的距离,'20%'
+                bottom: "3%",                            //组件离容器下侧的距离,'20%'
+
+            }],
+        grid: {
+            left: '5%',
+            right: '5%',
+            bottom: '10%',
+            containLabel: true
+        },
+        yAxis:  {
+            type: 'value',
+            inverse: false,
+            name:"",
+            max : 31,
+            min : -31,
+            axisLine: {
+                show: false,
+                lineStyle: {
+                    color: '#eff2f8',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                formatter:function(value){
+
+                    value = Math.abs(value)
+                    return value+'日'
+                },
+                textStyle: {
+                    color: '#999',
+//                    fontSize: 24
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#eff2f8',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+        },
+        xAxis: {
+            type: 'category',
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#eff2f8',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#999',
+//                    fontSize: 24,
+                },
+                formatter : function(params){
+                    var newParamsName = "";// 最终拼接成的字符串
+                    var paramsNameNumber = params.length;// 实际标签的个数
+                    var provideNumber = 5;// 每行能显示的字的个数
+                    var rowNumber = Math.ceil(paramsNameNumber / provideNumber);// 换行的话，需要显示几行，向上取整
+                    /**
+                     * 判断标签的个数是否大于规定的个数， 如果大于，则进行换行处理 如果不大于，即等于或小于，就返回原标签
+                     */
+                    // 条件等同于rowNumber>1
+                    if (paramsNameNumber > provideNumber) {
+                        /** 循环每一行,p表示行 */
+                        for (var p = 0; p < rowNumber; p++) {
+                            var tempStr = "";// 表示每一次截取的字符串
+                            var start = p * provideNumber;// 开始截取的位置
+                            var end = start + provideNumber;// 结束截取的位置
+                            // 此处特殊处理最后一行的索引值
+                            if (p == rowNumber - 1) {
+                                // 最后一次不换行
+                                tempStr = params.substring(start, paramsNameNumber);
+                            } else {
+                                // 每一次拼接字符串并换行
+                                tempStr = params.substring(start, end) + "\n";
+                            }
+                            newParamsName += tempStr;// 最终拼成的字符串
+                        }
+
+                    } else {
+                        // 将旧标签的值赋给新标签
+                        newParamsName = params;
+                    }
+                    //将最终的字符串返回
+                    return newParamsName
+                }
+            },
+            splitLine: {
+                show: false,
+                lineStyle: {
+                    color: '#999',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+            data: ['事项1xxxx事项', '事项2', '事项3', '事项4', '事项5', '事项6', '事项7','事项8','事项11', '事项12', '事项13', '事项14', '事项15', '事项16', '事项17','事项18']
+
+        },
+        series: [
+            {
+                name: '办理中',
+                type: 'bar',
+                stack: '总量',
+                barWidth : 30,
+                label: {
+                    show: true
+                },
+                itemStyle: {
+                    //通常情况下：
+                    normal: {
+                        barBorderRadius: [5, 5, 0, 0],
+                        //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                        color: function (params) {
+
+                            var index_num = params.value;
+
+                            for (var i = 0; i < data1.length; i++) {
+
+                                //判断数据
+
+                                var suijishu=Math.ceil(Math.random()*100);
+
+                                if (suijishu < 80) {
+                                    return '#2585f7';
+                                } else if((suijishu > 79)&&(suijishu < 95)){
+
+                                    return '#f28c3c';
+                                }else {
+                                    return '#ed3835'
+                                }
+                            }
+
+
+                        }
+                    },
+                    //鼠标悬停时：
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                data: data1
+            },
+            {
+                name: '待办理',
+                type: 'bar',
+                stack: '总量',
+                barWidth : 30,
+                label: {
+                    show: true,
+                    position: 'left'
+                },
+                itemStyle: {
+                    //通常情况下：
+                    normal: {
+                        barBorderRadius: [0, 0, 5, 5],
+                        //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                        color: function (params) {
+
+                            var index_num = params.value;
+
+                            for (var i = 0; i < data1.length; i++) {
+
+                                //判断数据
+
+                                var suijishu=Math.ceil(Math.random()*100);
+
+                                if (suijishu < 75) {
+                                    return '#2585f7';
+                                } else if((suijishu > 74)&&(suijishu < 90)){
+
+                                    return '#f28c3c';
+                                }else {
+                                    return '#ed3835'
+                                }
+                            }
+
+
+                        }
+                    },
+                    //鼠标悬停时：
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                data: data2
+            }
+        ]
+    };
+
+    var bar1 = echarts.init(document.getElementById('bar1'));
+
+   bar1.setOption(option);
+
+
+
+//   $(".style7 ul li").off().on("click",function(){
+//       if($(this).hasClass('active')){
+//           $(this).removeClass('active')
+//       }else{
+//           $(this).addClass('active')
+//       }
+//   })
+
+    $(".lct").html('<iframe src="http://119.45.138.153/tlp/html/t.HTML" width="100%" height="100%" frameborder="0"></iframe>')
+
+
+
+    $('#select1').select();
+    $('#select2').select();
+    $('#select3').select();
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

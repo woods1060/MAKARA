@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html style="height: 100%;display: none">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>首页</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+    <link href="layui/css/layui.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<?php
+    $servername = "119.3.223.214";
+    $username = "root";
+    $password = "sigh987yu";
+    $dbname = "MAKARA";
+
+    // 创建连接
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+        die("连接失败: " . mysqli_connect_error());
+    }
+    mysqli_close($conn);
+?>
+<div class="page_father">
+    <div class="main">
+        <div class="head clearfix">
+            <div class="head-left fl">
+                <p>今日，</p>
+                <p><span class="date">2020年11月10日星期二</span>，欢迎您使用MAZARA控制台</p>
+            </div>
+            <div class="head-right fr flex">
+                <div class="head-right-child flex">
+                    <div class="img">
+                        <i class="layui-icon layui-icon-template-1"></i>
+                    </div>
+                    <div class="text">
+                        <p>2</p>
+                        <p>待处理</p>
+                    </div>
+                </div>
+                <div class="head-right-child flex">
+                    <div class="img">
+                        <i class="layui-icon layui-icon-template-1"></i>
+                    </div>
+                    <div class="text">
+                        <p>2</p>
+                        <p>处理中</p>
+                    </div>
+                </div>
+                <div class="head-right-child flex">
+                    <div class="img">
+                        <i class="layui-icon layui-icon-template-1"></i>
+                    </div>
+                    <div class="text">
+                        <p>2</p>
+                        <p>已处理</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="items flex">
+            <div class="item w1 h1">
+                <p class="title">程序总数 <i class="fr layui-icon layui-icon-more"></i></p>
+                <div class="item-body flex">
+                    <div class="cxzs">
+                        829件
+                    </div>
+                    <div class="chart" id="chart1">
+
+                    </div>
+                </div>
+            </div>
+            <div class="item w1 h1">
+                <p class="title">我的任务 <i class="fr layui-icon layui-icon-more"></i></p>
+                <div class="item-body flex">
+                    <div class="wdrw">
+                       8个
+                    </div>
+                    <div class="chart" id="chart2">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="item w1 h1">
+                <p class="title">访问 <i class="fr layui-icon layui-icon-more"></i></p>
+                <p class="sub-title">本周299次</p>
+                <div class="item-body flex">
+                    <div class="chart" id="chart3">
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="item w1 h2">
+                <p class="title">各程序漏洞数量</p>
+                <div class="item4-text">
+                    <b>730</b>漏洞数量
+                </div>
+                <div class="chart" id="chart4"></div>
+                <div class="item4-style">
+                    <div>
+                        <i></i>
+                        <span>缓冲区溢出</span>
+                        <span class="fr">150</span>
+                    </div>
+                    <div>
+                        <i></i>
+                        <span>格式化字符串</span>
+                        <span class="fr">250</span>
+                    </div>
+                    <div>
+                        <i></i>
+                        <span>Use After Free</span>
+                        <span class="fr">70</span>
+                    </div>
+                    <div>
+                        <i></i>
+                        <span>Double Free</span>
+                        <span class="fr">30</span>
+                    </div>
+                    <div>
+                        <i></i>
+                        <span>任意地址读写</span>
+                        <span class="fr">230</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item w2 h2">
+                <p class="title">各架构漏洞数量</p>
+                <div class="item-body">
+                    <div class="chart" id="chart5"></div>
+                </div>
+
+
+            </div>
+            <div class="item w2 h2">
+                <p class="title">漏洞数量趋势</p>
+                <div class="item-body">
+                    <div class="chart" id="chart6"></div>
+                </div>
+
+            </div>
+            <div class="item w1 h2">
+                <p class="title">程序记录</p>
+                <div class="item-body" style="padding:0.2rem;">
+                    <table>
+                        <tr>
+                            <td>名称</td>
+                            <td>人员</td>
+                            <td>时间</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="table">
+                        <table>
+                            <tr>
+                                <td>
+                                    Stack
+                                    <img src="" alt="">
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2020-11-08 14:00:00
+                                </td>
+                                <td>
+                                    <i class="layui-icon layui-icon-more"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="" alt="">
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2020-11-08 14:00:00
+                                </td>
+                                <td>
+                                    <i class="layui-icon layui-icon-more"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="" alt="">
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2020-11-08 14:00:00
+                                </td>
+                                <td>
+                                    <i class="layui-icon layui-icon-more"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="" alt="">
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2020-11-08 14:00:00
+                                </td>
+                                <td>
+                                    <i class="layui-icon layui-icon-more"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="" alt="">
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2020-11-08 14:00:00
+                                </td>
+                                <td>
+                                    <i class="layui-icon layui-icon-more"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="" alt="">
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2020-11-08 14:00:00
+                                </td>
+                                <td>
+                                    <i class="layui-icon layui-icon-more"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="" alt="">
+                                </td>
+                                <td>
+                                    管理员
+                                </td>
+                                <td>
+                                    2020-11-08 14:00:00
+                                </td>
+                                <td>
+                                    <i class="layui-icon layui-icon-more"></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="item w1 h2">
+                <p class="title">空间存储</p>
+
+                <div class="item-body">
+                    <div class="chart" id="chart7"></div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.select.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/echarts.min.js"></script>
+<script type="text/javascript">
+    var whdef = 100 / 1920;// 表示1920的设计图,使用100PX的默认值
+    var wH = window.innerHeight;// 当前窗口的高度
+    var wW = window.innerWidth;// 当前窗口的宽度
+    var rem = wW * whdef;// 以默认比例值乘以当前窗口宽度,得到该宽度下的相应FONT-SIZE值
+    $('html').css('font-size', rem + "px");
+    $('html').css('display', 'block');
+
+    $(window).resize(function () {          //当浏览器大小变化时
+        location.reload();
+    });
+
+
+
+
+
+
+
+    layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate;
+
+    });
+
+
+
+    var option1 = {
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            top:'10%',
+            left: '5%',
+            right: '3%',
+            bottom: '10%',
+            containLabel: true
+        },
+        dataZoom: [
+            {
+                type: 'inside'
+            }
+        ],
+        yAxis:  {
+            type: 'value',
+            inverse: false,
+            name:"",
+            axisLine: {
+                show: false,
+                lineStyle: {
+                    color: '#eff2f8',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: false,
+                textStyle: {
+                    color: '#999',
+//                    fontSize: 24
+                },
+            },
+            splitLine: {
+                show: false,
+                lineStyle: {
+                    color: '#eff2f8',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+        },
+        xAxis: {
+            type: 'category',
+            axisLine: {
+                show: false,
+                lineStyle: {
+                    color: '#eff2f8',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: false,
+                textStyle: {
+                    color: '#999',
+//                    fontSize: 24,
+                },
+            },
+            splitLine: {
+                show: false,
+                lineStyle: {
+                    color: '#999',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+            data: ['11/05','11/06','11/07','11/08','11/09','11/10']
+        },
+        series: [
+            {
+                name: '',
+                type: 'bar',
+                barWidth: 10,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'top',
+//                        fontSize:24,
+                        color:'#999'
+                    }
+                },
+                itemStyle: { // 柱条样式。
+                    normal: {
+                        barBorderRadius: [10, 10, 0, 0],
+                        color:"#4fb8b1"
+                    }
+                },
+                data: [40, 50, 60, 70, 40, 50, 60]
+            }
+        ]
+    };
+    var chart1 = echarts.init(document.getElementById("chart1"));
+    chart1.setOption(option1);
+
+
+
+
+    var option2 = {
+        color:["#54bfa2","#f6b443","#5a78f6"],
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        graphic: [{ //环形图中间添加文字
+            type: 'text', //通过不同top值可以设置上下显示
+            left: '50%',
+            top: '45%',
+            style: {
+                text: '+37%',
+                textAlign: 'center',
+                fill: '#999', //文字的颜色
+
+                fontSize: 14,
+                fontFamily: "Microsoft YaHei"
+            }
+        }],
+        legend: {
+            orient: 'vertical',
+            left:0,
+            top:"20%",
+            icon:'circle',
+            data: ['已完成', '处理中', '待处理']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                center:["60%","50%"],
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                itemStyle : {
+                    normal : {
+                        label : {
+                            show : false
+                        },
+                        labelLine : {
+                            show : false
+                        }
+                    },
+
+                },
+
+
+                data: [
+                    {value: 335, name: '已完成'},
+                    {value: 310, name: '处理中'},
+                    {value: 234, name: '待处理'},
+                ]
+            }
+        ]
+    };
+    var chart2 = echarts.init(document.getElementById("chart2"));
+    chart2.setOption(option2);
+
+
+
+
+    var option3 = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        grid: {
+            show: false,					//---是否显示直角坐标系网格
+            top: "15%",						//---相对位置，top\bottom\left\right
+            right: "5%",
+            left: '5%',
+            bottom: '15%',
+            containLabel: false,			//---grid 区域是否包含坐标轴的刻度标签
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisLabel: {
+                    show:false,
+                    color: "#999"
+                },
+                axisLine: {
+                    show: false,
+                    lineStyle: {
+                        color: '#f0f1f2',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                axisTick: {
+                    show: false
+                },
+                splitLine: {					//---grid 区域中的分隔线
+                    show: false,					//---是否显示，'category'类目轴不显示，此时我的X轴为类目轴，splitLine属性是无意义的
+                    lineStyle: {
+                        color: '#0f3369',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                data: ['1', '2', '3', '4', '5','6','7']
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+//                interval: 2,
+                axisLabel: {
+                    show:false,
+                    formatter: '{value} ',
+
+                },
+                axisLine: {
+                    show: false,
+                    lineStyle: {
+                        color: '#999',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                axisTick: {
+                    show: false
+                },
+                splitLine: {					//---grid 区域中的分隔线
+                    show: false,					//---是否显示，'category'类目轴不显示，此时我的X轴为类目轴，splitLine属性是无意义的
+                    lineStyle: {
+                        color: '#f0f1f2',
+                        width: 1,
+                        type: 'solid',
+                    },
+                }
+            }
+        ],
+        series: [{
+            name: '',
+            type: 'line',
+            smooth: true,
+            areaStyle: {
+                normal: {
+                    opacity: 0.3,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ //关键在这里, 设置面积渐变
+                        offset: 0,
+                        color:"#c687b3"//这里是我设置的渐变的颜色从线条颜色变为白色，如果是循环数据，其中的0依次循环colorArr 就ok了
+                    }, {
+                        offset: 1,
+                        color: '#fff'
+                    }])
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: "#c687b3", // 折线条的颜色
+                    borderColor: "#c687b3", // 拐点边框颜色
+
+                }
+            },
+            "data": [1400, 2400, 1300, 2800, 1500,1800,2300]
+
+        }]
+    };
+
+    // 基于准备好的dom，初始化echarts实例
+    var chart3 = echarts.init(document.getElementById('chart3'));
+    // 使用刚指定的配置项和数据显示图表。
+    chart3.setOption(option3);
+
+
+
+    var option4 = {
+        color:["#5a65e1","#ec407f","#57c7b8","#f7b844","#333b46"],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            show: false,					//---是否显示直角坐标系网格
+            top: "15%",						//---相对位置，top\bottom\left\right
+            right: "5%",
+            left: '5%',
+            bottom: '15%',
+            containLabel: false,			//---grid 区域是否包含坐标轴的刻度标签
+        },
+        calculable : true,
+        xAxis : [
+            {
+                show:false,
+                type : 'value'
+            }
+        ],
+        yAxis : [
+            {
+                axisLine: {
+                    show: false,
+                },
+                show:false,
+                type : 'category',
+                data : ['1']
+            }
+        ],
+        series : [
+            {
+                name:'直接访问',
+                type:'bar',
+                stack: '总量',
+                barWidth: 15,
+                itemStyle : { normal: {label : {show: false, position: 'insideRight'}}},
+                data:[320]
+            },
+            {
+                name:'邮件营销',
+                type:'bar',
+                stack: '总量',
+                barWidth: 15,
+                itemStyle : { normal: {label : {show: false, position: 'insideRight'}}},
+                data:[220]
+            },
+            {
+                name:'联盟广告',
+                type:'bar',
+                stack: '总量',
+                barWidth: 15,
+                itemStyle : { normal: {label : {show: false, position: 'insideRight'}}},
+                data:[140]
+            },
+            {
+                name:'视频广告',
+                type:'bar',
+                stack: '总量',
+                barWidth: 15,
+                itemStyle : { normal: {label : {show: false, position: 'insideRight'}}},
+                data:[90]
+            },
+            {
+                name:'搜索引擎',
+                type:'bar',
+                stack: '总量',
+                barWidth: 15,
+                itemStyle : { normal: {label : {show: false, position: 'insideRight'}}},
+                data:[40]
+            }
+        ]
+    };
+
+    var chart4 = echarts.init(document.getElementById('chart4'));
+    // 使用刚指定的配置项和数据显示图表。
+    chart4.setOption(option4);
+
+
+
+
+    var option5 = {
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            top:'10%',
+            left: '5%',
+            right: '3%',
+            bottom: '10%',
+            containLabel: true
+        },
+        dataZoom: [
+            {
+                type: 'inside'
+            }
+        ],
+        yAxis:  {
+            type: 'value',
+            inverse: false,
+            name:"",
+            axisLine: {
+                show: false,
+                lineStyle: {
+                    color: '#eff2f8',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#999',
+//                    fontSize: 24
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#eff2f8',
+                    width: 1,
+                    type: 'dotted',
+                },
+            },
+        },
+        xAxis: {
+            type: 'category',
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#eff2f8',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+            axisTick: {
+                show: true,
+            },
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#999',
+//                    fontSize: 24,
+                },
+            },
+            splitLine: {
+                show: false,
+                lineStyle: {
+                    color: '#999',
+                    width: 1,
+                    type: 'solid',
+                },
+            },
+            data: ['x86','amd64','arm','armv8','mips']
+        },
+        series: [
+            {
+                name: '',
+                type: 'bar',
+                barWidth: 20,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'top',
+//                        fontSize:24,
+                        color:'#999'
+                    }
+                },
+                itemStyle: { // 柱条样式。
+                    normal: {
+                        barBorderRadius: [10, 10, 0, 0],
+                        color:"#2585f7"
+                    }
+                },
+                data: [40, 50, 60, 70, 40, 50]
+            }
+        ]
+    };
+    var chart5 = echarts.init(document.getElementById("chart5"));
+    chart5.setOption(option5);
+
+
+    var option6 = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        grid: {
+            show: false,					//---是否显示直角坐标系网格
+            top: "15%",						//---相对位置，top\bottom\left\right
+            right: "5%",
+            left: '15%',
+            bottom: '15%',
+            containLabel: false,			//---grid 区域是否包含坐标轴的刻度标签
+        },
+        dataZoom: [
+            {
+                type: 'inside'
+            }
+        ],
+        xAxis: [
+            {
+                type: 'category',
+                axisLabel: {
+                    show:true,
+                    color: "#999"
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#f0f1f2',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                axisTick: {
+                    show: false
+                },
+                splitLine: {					//---grid 区域中的分隔线
+                    show: false,					//---是否显示，'category'类目轴不显示，此时我的X轴为类目轴，splitLine属性是无意义的
+                    lineStyle: {
+                        color: '#0f3369',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                data: ['1', '2', '3', '4', '5','6','7']
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '',
+                min: 0,
+//                interval: 2,
+                axisLabel: {
+                    color:"#999",
+                    show:true,
+                    formatter: '{value} ',
+
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#f0f1f2',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+                axisTick: {
+                    show: false
+                },
+                splitLine: {					//---grid 区域中的分隔线
+                    show: true,					//---是否显示，'category'类目轴不显示，此时我的X轴为类目轴，splitLine属性是无意义的
+                    lineStyle: {
+                        color: '#f0f1f2',
+                        width: 1,
+                        type: 'solid',
+                    },
+                }
+            }
+        ],
+        series: [{
+            name: '',
+            type: 'line',
+            smooth: true,
+            areaStyle: {
+                normal: {
+                    opacity: 0.3,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ //关键在这里, 设置面积渐变
+                        offset: 0,
+                        color:"#7173c0"//这里是我设置的渐变的颜色从线条颜色变为白色，如果是循环数据，其中的0依次循环colorArr 就ok了
+                    }, {
+                        offset: 1,
+                        color: '#fff'
+                    }])
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: "#7173c0", // 折线条的颜色
+                    borderColor: "#fbe09a", // 拐点边框颜色
+
+                }
+            },
+            "data": [1400, 2400, 1300, 2800, 1500,1800,2300]
+
+        }]
+    };
+
+    // 基于准备好的dom，初始化echarts实例
+    var chart6 = echarts.init(document.getElementById('chart6'));
+    // 使用刚指定的配置项和数据显示图表。
+    chart6.setOption(option6);
+
+
+    var option7 = {
+        color:["#f6ae42","#ececec"],
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        graphic: [{ //环形图中间添加文字
+            type: 'text', //通过不同top值可以设置上下显示
+            left: 'center',
+            top: '40%',
+            style: {
+                text: '75%',
+                textAlign: 'center',
+                fill: '#999', //文字的颜色
+                fontSize: 30,
+                fontFamily: "Microsoft YaHei"
+            }
+        }],
+        legend: {
+            orient: 'horizontal',
+            left:"center",
+            bottom:"8%",
+            icon:'circle',
+            data: ['已使用','未使用']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                roseType: 'radius',
+                center:["50%","45%"],
+                radius: ['45%', '60%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                itemStyle : {
+                    normal : {
+                        label : {
+                            show : false
+                        },
+                        labelLine : {
+                            show : false
+                        }
+                    },
+
+                },
+
+
+                data: [
+                    {value: 300, name: '已使用'},
+                    {value: 100, name: '未使用'},
+                ]
+            }
+        ]
+    };
+    var chart7 = echarts.init(document.getElementById("chart7"));
+    chart7.setOption(option7);
+
+
+
+
+</script>
+
+
+</body>
+</html>

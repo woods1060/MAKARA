@@ -1,0 +1,5 @@
+$(".menu>ul>li").off().on("click",function() {
+
+
+    $(this).find('.child-ul').slideToggle();
+});

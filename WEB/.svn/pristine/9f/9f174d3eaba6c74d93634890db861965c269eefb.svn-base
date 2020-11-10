@@ -1,0 +1,397 @@
+body, html {
+    /*height: 100%;*/
+    width: 100%;
+    overflow: auto;
+    font-size: 0.18rem;
+    color: #fff;
+    font-family: "微软雅黑";
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page_father{
+    width:100%;
+    /*height:100%;*/
+    overflow: auto;
+}
+.head{
+    width:100%;
+    height:0.8rem;
+    background: url(../images/head.png) center no-repeat;
+    background-size: 100%;
+    padding:0 0.2rem;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:99;
+
+}
+.head a.logo{
+    display: inline-block;
+    width:2.15rem;
+    height:0.47rem;
+    margin:0.165rem 0;
+    margin-left:0.3rem;
+}
+.head a.logo img{
+    width:100%;
+    height:100%;
+}
+.head i.logo-line{
+    width:1px;
+    height:0.3rem;
+    display: inline-block;
+    background: #fff;
+    margin:0.25rem 0.3rem;
+}
+.head .head-search{
+    width:3.7rem;
+    height:0.45rem;
+    margin:0.175rem 0;
+    border-radius: 0.2rem;
+    position: relative;
+    overflow: hidden;
+    background-color: #4890f7;
+    color:#fff;
+}
+.head .head-search input{
+    width:100%;
+    height:100%;
+    background-color: #4890f7;
+    color:#fff;
+    border:none!important;
+    border-radius: 0.2rem;
+    padding:0 0.55rem 0 0.3rem;
+    font-size: 0.18rem;
+    outline:none;
+}
+
+
+.head .head-search ::-webkit-input-placeholder { color:#fff; }
+.head .head-search ::-moz-placeholder { color:#fff; } /* firefox 19+ */
+.head .head-search :-ms-input-placeholder { color:#fff; } /* ie */
+.head .head-search input:-moz-placeholder { color:#fff; }
+
+.head .head-search i.icon{
+    position: absolute;
+    display: inline-block;
+    background: url(../images/head-search-icon.png) center no-repeat;
+    background-size: 0.55rem 0.61rem;
+    width:0.55rem;
+    height:0.61rem;
+    right:0;
+    top:-0.1rem;
+    cursor: pointer;
+}
+.head-right .info{
+    height:0.45rem;
+    margin:0.175rem 0;
+    line-height: 0.45rem;
+}
+.head-right .info .touxiang{
+    display: inline-block;
+    width:0.45rem;
+    height:0.45rem;
+    border-radius: 100%;
+    border:2px solid #fff;
+    overflow: hidden;
+    margin-right:0.2rem;
+    background-color: #fff;
+}
+.head-right .info .touxiang img{
+    width:100%;
+    height:100%;
+}
+.head-right .city{
+    height:0.45rem;
+    margin:0.175rem 0;
+}
+.head-right .city *{
+    display: inline-block;
+    line-height: 0.45rem;
+}
+
+.head-right .weather{
+    margin-left: 0.5rem;
+}
+.head-right .weather>*{
+    height:0.42rem;
+    margin:0.19rem 0.1rem;
+}
+.head-right .weather p{
+    font-size: 0.16rem;
+    line-height: 0.16rem;
+}
+.head-right .weather p.wd{
+    font-size: 0.2rem;
+    line-height: 0.28rem;
+}
+
+.head-right .date{
+    height:0.46rem;
+    margin:0.17rem 0.1rem;
+}
+.head-right .date p{
+    font-size: 0.16rem;
+    line-height: 0.16rem;
+    width:100%;
+    text-align: center;
+}
+.head-right .date p.time{
+    font-size: 0.24rem;
+    line-height: 0.3rem;
+}
+.head-right a.logout{
+    display: inline-block;
+    background: url(../images/logout.png) center no-repeat;
+    background-size: 0.21rem;
+    width:0.21rem;
+    height:0.21rem;
+    margin:0.3rem 0 0.3rem 0.3rem;
+}
+/*下拉框*/
+.select {
+    display: inline-block;
+    position: relative;
+    width: 1rem;
+    min-width: 1rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    cursor: pointer;
+    color:#fff;
+}
+
+.select:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0.1rem;
+    margin-top: -0.02rem;
+    border-top: 0.05rem solid #fff;
+    border-right: 0.05rem solid transparent;
+    border-left: 0.05rem solid transparent;
+}
+
+.select .select_text {
+    padding: 0 0.2rem 0 0.05rem;
+    height: 0.33rem;
+    line-height: 0.33rem;
+    text-align: center;
+}
+
+.head-right .city .select_ul {
+    display: none;
+    position: absolute;
+    top: 0.65rem;
+    left: 1px;
+    width: calc(1rem - 1px);
+    min-width: calc(1rem - 1px);
+    background-color: #1d80f6;
+}
+.select_ul li {
+    line-height: 0.33rem!important;
+    text-indent: 0.05rem;
+    width:100%;
+    text-align: center;
+}
+.banner{
+    width:100%;
+    height:5.6rem;
+    background: url(../images/banner.png) center no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+.banner .code{
+    width:2rem;
+    height:2rem;
+    position: absolute;
+    top:1.1rem;
+    border-radius: 0.1rem;
+    overflow: hidden;
+}
+.banner .code img{
+    width:100%;
+    height:100%;
+}
+.banner .code1{
+    left:10.3rem;
+}
+.banner .code2{
+    right:4.12rem;
+}
+.banner .banner-down{
+    display: inline-block;
+    position: absolute;
+    left:11.7rem;
+    bottom:0.8rem;
+    background: url(../images/banner-btn.png) center no-repeat;
+    background-size: 2rem 0.6rem;
+    width:2rem;
+    height:0.6rem;
+}
+.main{
+    background-color: #e9ecf3;
+    width:100%;
+}
+.menu {
+    width:2.4rem;
+    height:100%;
+    background-color: #fff;
+    padding:0.2rem 0.12rem;
+    color:#85909f;
+    position: relative;
+}
+.menu .fix-left{
+    position: absolute;
+    width:100%;
+    left:0;
+    bottom:-0.3rem;
+    background-color: #edf2fc;
+    height:0.55rem;
+    color:#666;
+    padding:0 0.2rem;
+}
+.menu .fix-left>span{
+    height:0.55rem;
+    line-height: 0.55rem;
+    display: inline-block;
+    margin-right: 0.2rem;
+}
+
+.menu .layui-form-switch{
+    margin-top: 0;
+}
+.menu .layui-form-onswitch {
+    border-color: #2585f7;
+    background-color: #2585f7;
+}
+.menu ul li{
+    width:100%;
+    line-height: 0.7rem;
+    text-align: left;
+}
+.menu ul li a{
+    display: inline-block;
+    width:100%;
+    height:100%;
+    color:#85909f;
+}
+.menu ul.child-ul{
+    width:100%;
+    display: none;
+}
+.menu li.active ul.child-ul{
+    display: block;
+}
+.menu ul.child-ul li{
+    width:100%;
+    height:0.45rem;
+    line-height: 0.45rem;
+    margin:0.1rem 0;
+}
+
+.menu>ul>li:first-child>a{
+    background: url(../images/shouye.png) 0.3rem center no-repeat;
+    background-size: 0.17rem;
+    padding-left:0.7rem;
+}
+.menu>ul>li:nth-child(2)>a{
+    background: url(../images/zixun.png) 0.3rem center no-repeat;
+    background-size: 0.17rem;
+    padding-left:0.7rem;
+}
+.menu>ul>li:nth-child(3)>a{
+    background: url(../images/yushouli.png) 0.3rem center no-repeat;
+    background-size: 0.17rem;
+    padding-left:0.7rem;
+}
+.menu>ul>li:nth-child(4)>a{
+    background: url(../images/banli.png) 0.3rem center no-repeat;
+    background-size: 0.17rem;
+    padding-left:0.7rem;
+}
+.menu>ul>li:nth-child(5)>a{
+    background: url(../images/shouli.png) 0.3rem center no-repeat;
+    background-size: 0.17rem;
+    padding-left:0.7rem;
+}
+.menu>ul>li:nth-child(6)>a{
+    background: url(../images/shebei.png) 0.3rem center no-repeat;
+    background-size: 0.17rem;
+    padding-left:0.7rem;
+}
+.menu>ul>li:nth-child(7)>a{
+    background: url(../images/xitong.png) 0.3rem center no-repeat;
+    background-size: 0.17rem;
+    padding-left:0.7rem;
+}
+.menu>ul>li:nth-child(8)>a{
+    background: url(../images/fenxi.png) 0.3rem center no-repeat;
+    background-size: 0.17rem;
+    padding-left:0.7rem;
+}
+.menu>ul>li>a i.right-icon{
+    display: inline-block;
+    float:right;
+    background: url(../images/you@2x.png) center no-repeat;
+    background-size: 0.06rem 0.11rem;
+    width:0.1rem;
+    height:0.7rem;
+}
+.menu>ul>li.active>a i.right-icon{
+    display: inline-block;
+    float:right;
+    background: url(../images/you@2x-2.png) center no-repeat;
+    background-size: 0.06rem 0.11rem;
+    width:0.1rem;
+    height:0.7rem;
+}
+.menu>ul>li.active>a,.menu>ul>li:hover>a{
+    color:#167af6;
+}
+
+.menu ul.child-ul li a{
+    font-size: 0.16rem;
+    padding:0 0.2rem;
+}
+.menu ul.child-ul li.active a,.menu ul.child-ul li:hover a{
+    background-color: #167af6;
+    border-radius: 0.25rem;
+    color:#fff;
+}
+.menu ul.child-ul li a:before{
+    content: '';
+    display: inline-block;
+    width:0.05rem;
+    height:0.05rem;
+    border-radius: 50%;
+    background-color: #fff;
+    margin:0 0.2rem;
+}
+.foot{
+    width:100%;
+    height:1.4rem;
+    background-color: #2585f7;
+    color:#fff;
+    padding:0.1rem 1rem 0 2.8rem;
+    font-size: 0.16rem;
+}
+.foot .phone{
+    font-size: 0.24rem;
+    line-height: 0.5rem;
+}
+.foot img{
+    width:1.09rem;
+    height:1.09rem;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}

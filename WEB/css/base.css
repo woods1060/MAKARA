@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+/*原子样式*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr {
+	margin:0;
+	padding:0;
+}
+div, p {
+	word-wrap: break-word;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset, img {
+	border:0;
+}
+div, p {
+	word-wrap: break-word;
+}
+
+fieldset, img {
+	border:0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol, ul, li {
+	list-style:none;
+}
+caption, th {
+	text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+a {
+	text-decoration:none;
+	outline: none;
+    /*-webkit-transition: color .4s ease, background-color .4s ease;*/
+    /*-moz-transition: color .4s ease ,background-color .4s ease;*/
+    /*-o-transition: color .4s ease , background-color .4s ease;*/
+    /*transition: color .4s ease , background-color .4s ease;*/
+	
+}
+a:hover {
+	
+}
+/* 重置，减少对行高的影响 */
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+/*清除浮动*/
+.clearfix:after {
+	content:"\0020";
+	height:0;
+	display:block;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix {
+ *zoom:1;
+}
+/* 隐藏样式 */
+.d-hidden {
+	display:none !important;
+}
+.v-hidden {
+	visibility:hidden !important;
+}
+/* input,img等标签的垂直居中 */
+.v-top {
+	vertical-align: top;
+}
+.v-middle {
+	vertical-align: middle;
+}
+/* 文字超长隐藏并加省略号 */
+.text-overflow {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.overfl{
+overflow:hidden;
+}
+/*原子样式*/
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+.tac {
+	text-align: center;
+}
+.tal {
+	text-align: left;
+}
+.tar {
+	text-align: right;
+}
+.pr {
+	position: relative;
+}
+.pa {
+	position: absolute;
+}
+.ps {
+	position: static;
+}
+.pf {
+	position: fixed;
+}
+
+/*定位原子样式*/
+.clearfix:after{visibility:hidden;display:block;font-size:0;content: " ";clear:both;height:0;}
+.clearfix{*zoom:1;}
