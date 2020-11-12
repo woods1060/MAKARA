@@ -1,0 +1,2 @@
+def Say():
+    print("Hi!")
